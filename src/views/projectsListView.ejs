@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hive Design</title>
+    <link display='block' href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&family=Roboto:wght@400;700;900&display=swap" as="font" type="font/woff2" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+<body>
+  <!-- navigation -->
+  <div id="nav" class="nav columns">
+    <a href='/'><img id='logo' class='nav-child' src='/images/logo.svg'></a>
+    <a href='/about' id='about' class="nav-child dark-grey-button">ABOUT US</a>
+    <a href='/projects' id='work' class="nav-child dark-grey-button">PROJECTS</a>
+    <a href='/contact' id='mini-connect' class="nav-child last yellow-button">Let's<br> connect</a>
+  </div>
+<!-- projects' gallery -->
+ 
+ <div id="gallery-section">
+
+<% projects.forEach((project, index) => {%>
+          <%if (index === 0 || index%2 === 0) {%>
+ <div class="project-block left flex">
+        <div class="photo-wrapper left flex">
+          <svg class='arrow btn' viewBox="0 0 192.74 523.53">
+            <polygon class='prev dark-grey-button' points="149.91 0, 0 261.76, 149.91 523.53, 192.74 523.53, 42.83 261.76, 192.74 0"></polygon>
+          </svg>
+          <svg class='svg-photo' viewBox="0 0 556.79 523.53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <a href='/projects/<%=project.route%>'>
+            <image class='clipped' width="100%" height="523.53" xlink:href="https://image.geze.com/im/StageSpezial/pboxx-pixelboxx-619726/Des" 
+            preserveAspectRatio="xMidYMin slice"></image>
+            </a>
+          </svg>
+          <svg class='arrow btn' viewBox="0 0 192.74 523.53">
+            <polygon class='next dark-grey-button' points="0 0, 149.91 261.76, 0 523.53, 42.83 523.53, 192.74 261.76, 42.83 0" shape-rendering="geometricPrecision"></polygon>
+          </svg>
+        </div>
+        <div class="text-wrapper flex">
+          <div class="inactive flex">
+            <svg class='arrow txt right' viewBox="0 0 192.74 523.53">
+              <polygon class='ligth-grey' points="149.91 0, 0 261.76, 149.91 523.53, 192.74 523.53, 42.83 261.76, 192.74 0" ></polygon>
+            </svg>
+            <div class="project-title-box">
+              <h3 class="title-right"><%=project.title%><br> <%=project.year%></h3>
+            </div>
+          </div>
+          <div class="description last">
+            <h3><%=project.title%><br> <%=project.year%></h3>
+            <p><br>We're an experienced team of designers & developers, partnering with brands like Google, Nike, and National Geographic since 2011. We care deeply about what we do and have become experts in beautifully-designed software.
+              <br><br>We are here to build a high-quality extension for brands to serve their consumers. We're not interested in fluff - we want to build useful tools that will keep people coming back</p>
+          </div>
+        </div>
+      </div>
+          <% } else {%>
+          <div class="project-block right flex">
+        <div class="text-wrapper flex">
+          <div class="inactive flex">
+            <div class="project-title-box">
+              <h3 class="title-left"><%=project.title%><br> <%=project.year%></h3>
+            </div>
+            <svg class='arrow txt left' viewBox="0 0 192.74 523.53">
+              <polygon class='ligth-grey' points="0 0, 149.91 261.76, 0 523.53, 42.83 523.53, 192.74 261.76, 42.83 0" shape-rendering="geometricPrecision" ></polygon>
+            </svg>
+          </div>
+          <div class="description first">
+            <h3><%=project.title%><br> <%=project.year%></h3>
+            <p><br>We're an experienced team of designers & developers, partnering with brands like Google, Nike, and National Geographic since 2011. We care deeply about what we do and have become experts in beautifully-designed software.
+              <br><br>We are here to build a high-quality extension for brands to serve their consumers. We're not interested in fluff - we want to build useful tools that will keep people coming back</p>
+          </div>
+        </div>
+        <div class="photo-wrapper right flex">
+          <svg class='arrow btn' viewBox="0 0 192.74 523.53">
+            <polygon class=' prev dark-grey-button' points="149.91 0, 0 261.76, 149.91 523.53, 192.74 523.53, 42.83 261.76, 192.74 0" ></polygon>
+          </svg>
+          <svg class='svg-photo' viewBox="0 0 556.79 523.53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <image class='clipped' width="100%" height="523.53" xlink:href="https://image.geze.com/im/StageSpezial/pboxx-pixelboxx-619726/Des" preserveAspectRatio="xMidYMin slice"></image>
+          </svg>
+          <svg class='arrow btn' viewBox="0 0 192.74 523.53">
+            <polygon class=' next dark-grey-button' points="0 0, 149.91 261.76, 0 523.53, 42.83 523.53, 192.74 261.76, 42.83 0" shape-rendering="geometricPrecision" ></polygon>
+          </svg>
+        </div>
+      </div>
+        <%}})%>
+
+    </div>
+    <script type="text/javascript" src="/js/script.js"></script>
+</body>
+</html>
