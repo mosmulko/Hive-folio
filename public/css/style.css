@@ -23,7 +23,7 @@ h3 {
 a {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  font-size: 17px;
+  font-size: 2vh;
   letter-spacing: 1px;
   text-decoration: none;
 }
@@ -31,7 +31,7 @@ a {
 h3 {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  font-size: 22px;
+  font-size: 2.5vh;
   letter-spacing: 1.5px;
 }
 
@@ -41,6 +41,7 @@ nav {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 24px;
+  height: fit-content;
   margin-top: 30px;
 }
 
@@ -52,7 +53,7 @@ nav a {
 nav a::after {
   content: "";
   display: block;
-  background: #4859ff;
+  background: #0646fc;
   width: 0;
   height: 4px;
   margin-top: 5px;
@@ -82,8 +83,9 @@ nav a:last-child {
     margin: 4%;
   }
 
+  a,
   h3 {
-    font-size: 19px;
+    font-size: 17px;
   }
 
   nav {
@@ -91,5 +93,29 @@ nav a:last-child {
     text-align: center;
     display: flex;
     flex-direction: column;
+    margin-top: 10%;
+  }
+
+  nav a {
+    padding: 40px 0;
+  }
+}
+
+@media only screen and (max-device-width: 600px) {
+  a,
+  h3 {
+    font-size: 15px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5%;
+    padding: 0 5vw;
+  }
+
+  nav a {
+    padding: 0;
   }
 }
