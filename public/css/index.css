@@ -19,6 +19,15 @@ h3 {
   align-self: start;
 }
 
+#graphic {
+  grid-column: 6 / -2;
+  grid-row: 1 / 5;
+  justify-self: end;
+  align-self: center;
+  width: 90%;
+  margin-top: -8vh;
+}
+
 .contact-button {
   grid-column: 4 / 7;
   grid-row: 3 / 6;
@@ -34,13 +43,28 @@ h3 {
   background-color: #0646fc;
 }
 
-#graphic {
-  grid-column: 6 / -2;
-  grid-row: 1 / 5;
-  justify-self: end;
-  align-self: center;
-  width: 90%;
-  margin-top: -8vh;
+.cls-1,
+.cls-2,
+.cls-3,
+.cls-4,
+.cls-5 {
+  opacity: 0.55;
+}
+
+.cls-1 {
+  fill: #ed1c24;
+}
+.cls-2 {
+  fill: #f15a24;
+}
+.cls-3 {
+  fill: #ff931e;
+}
+.cls-4 {
+  fill: #ffb41f;
+}
+.cls-5 {
+  fill: #e82a21;
 }
 
 @media only screen and (min-device-width: 601px) and (max-device-width: 1024px) and (orientation: portrait) {
@@ -62,14 +86,6 @@ h3 {
     align-self: end;
   }
 
-  .contact-button {
-    grid-column: 1 / -1;
-    grid-row: 3 / 4;
-    align-self: center;
-    justify-self: center;
-    margin-top: -3%;
-  }
-
   #graphic {
     grid-column: 3 / -1;
     grid-row: 1 / 2;
@@ -78,21 +94,21 @@ h3 {
     width: 95%;
     margin: 0;
   }
+
+  .contact-button {
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+    align-self: center;
+    justify-self: center;
+    margin-top: -3%;
+  }
 }
 
 @media only screen and (max-device-width: 600px) and (orientation: portrait) {
-  /* html {
-    background-color: white;
-  } */
-
   body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* background-image: url("../images/phone.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-  } */
   }
 
   header {
@@ -118,10 +134,14 @@ h3 {
     width: 100vw;
     margin: 0;
   }
+
+  .lighter {
+    opacity: 25%;
+  }
 }
 
-@media only screen and (max-aspect-ratio: 9/18) {
+@media only screen and (max-aspect-ratio: 9/17) {
   h3 {
-    top: 51vh;
+    top: 52vh;
   }
 }
