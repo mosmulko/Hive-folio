@@ -88,7 +88,7 @@ nav a:last-child {
   background-color: #0646fc;
 }
 
-@media only screen and (min-device-width: 500px) and (max-device-width: 1366px) and (min-aspect-ratio: 10/16) and (max-aspect-ratio: 16/10) {
+@media only screen and (min-device-width: 540px) and (max-device-width: 1366px) and (min-aspect-ratio: 10/16) and (max-aspect-ratio: 16/10) {
   body {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
@@ -110,30 +110,6 @@ nav a:last-child {
 
   nav a {
     padding: 40px 0;
-  }
-}
-
-@media only screen and (max-device-width: 599px) {
-  body {
-    margin: 0;
-  }
-
-  a,
-  h3 {
-    font-size: 15px;
-  }
-
-  nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    /* height: 5vh; */
-    margin-top: 5%;
-    padding: 0 5vw;
-  }
-
-  nav a {
-    padding: 0;
   }
 }
 
@@ -162,5 +138,31 @@ nav a:last-child {
     height: 2px;
     margin-top: 2px;
     margin-left: -2px;
+  }
+}
+
+@media only screen and (max-device-width: 539px) {
+  body {
+    grid-column-gap: 0;
+    margin: 0;
+  }
+
+  a,
+  h3 {
+    font-size: 15px;
+  }
+
+  nav {
+    grid-column: 2 / -2;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10%;
+    padding: 0 5vw;
+  }
+
+  nav a {
+    padding: 0;
   }
 }
