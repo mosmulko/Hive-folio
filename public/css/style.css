@@ -13,6 +13,7 @@ body {
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 24px;
   grid-row-gap: 0px;
+  margin: 0 4%;
 }
 
 a,
@@ -23,16 +24,16 @@ h3 {
 a {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  font-size: 2vh;
-  letter-spacing: 1px;
+  font-size: 1vw;
+  letter-spacing: 0.09em;
   text-decoration: none;
 }
 
 h3 {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  font-size: 2.5vh;
-  letter-spacing: 1.5px;
+  font-size: 1.3vw;
+  letter-spacing: 0.09em;
 }
 
 nav {
@@ -75,12 +76,23 @@ nav a:last-child {
   justify-self: start;
 }
 
-@media only screen and (min-device-width: 601px) and (max-device-width: 1024px) and (orientation: portrait) {
+.contact-button {
+  background-color: #4859ff;
+  text-align: center;
+  width: fit-content;
+  padding: 1.2em;
+}
+
+.contact-button:hover,
+.contact-button:active {
+  background-color: #0646fc;
+}
+
+@media only screen and (min-device-width: 500px) and (max-device-width: 1366px) and (min-aspect-ratio: 10/16) and (max-aspect-ratio: 16/10) {
   body {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-column-gap: 16px;
-    margin: 4%;
   }
 
   a,
@@ -101,7 +113,11 @@ nav a:last-child {
   }
 }
 
-@media only screen and (max-device-width: 600px) {
+@media only screen and (max-device-width: 599px) {
+  body {
+    margin: 0;
+  }
+
   a,
   h3 {
     font-size: 15px;
@@ -111,11 +127,40 @@ nav a:last-child {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    /* height: 5vh; */
     margin-top: 5%;
     padding: 0 5vw;
   }
 
   nav a {
     padding: 0;
+  }
+}
+
+@media only screen and (max-device-width: 900px) and (min-aspect-ratio: 17/10) {
+  body {
+    margin: 0;
+  }
+
+  a,
+  h3 {
+    font-size: 11px;
+  }
+
+  nav {
+    grid-column: 2 / 6;
+    grid-column-gap: 8px;
+    margin-top: 15px;
+  }
+
+  nav a {
+    height: 1em;
+    padding: 10px 0;
+  }
+
+  nav a::after {
+    height: 2px;
+    margin-top: 2px;
+    margin-left: -2px;
   }
 }
