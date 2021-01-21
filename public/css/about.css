@@ -1,0 +1,59 @@
+svg {
+  height: calc(20vw * 1.229);
+  width: 20vw;
+}
+
+div {
+  display: flex;
+  height: max-content;
+}
+
+#container {
+  flex-flow: row wrap;
+  width: 60vw;
+}
+
+#second,
+#third {
+  margin-top: calc(3.3vw * 1.229);
+}
+
+#third,
+.column {
+  flex-direction: column;
+}
+
+.orange {
+  fill: #ff9d00;
+}
+
+.arrow {
+  height: calc(20vw * 0.3681);
+}
+
+@media only screen and (min-device-width: 540px) and (max-device-width: 1366px) and (min-aspect-ratio: 1/1) and (max-aspect-ratio: 16/10) {
+  #second {
+    margin-top: calc(3.3vw * 1.229);
+  }
+
+  #third {
+    flex-flow: row wrap;
+    width: 40vw;
+  }
+
+  .lower {
+    margin-top: calc(9.3vw * 1.229);
+  }
+
+  #third,
+  .higher {
+    margin-top: calc(9.3vw * -1.229);
+  }
+
+  .hidden {
+    display: none;
+  }
+}
+
+@media only screen and (min-device-width: 540px) and (max-device-width: 1366px) and (min-aspect-ratio: 10/16) and (max-aspect-ratio: 1/1) {
+}
