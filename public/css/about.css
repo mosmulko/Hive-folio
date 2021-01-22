@@ -1,6 +1,10 @@
+body {
+  grid-template-rows: 14.6vh auto;
+}
+
 svg {
-  height: calc(20vw * 1.229);
-  width: 20vw;
+  height: calc(47.4vh * 1.229);
+  width: 47.4vh;
 }
 
 div {
@@ -9,13 +13,16 @@ div {
 }
 
 #container {
+  grid-column: 2 / -2;
+  grid-row: 2 / 3;
+  justify-self: center;
   flex-flow: row wrap;
-  width: 60vw;
+  width: 142.2vh;
 }
 
 #second,
 #third {
-  margin-top: calc(3.3vw * 1.229);
+  margin-top: calc(7.9vh * 1.229);
 }
 
 #third,
@@ -28,26 +35,97 @@ div {
 }
 
 .arrow {
-  height: calc(20vw * 0.3681);
+  height: calc(47.4vh * 0.3681);
+}
+
+.yellow {
+  fill: yellow;
+}
+
+.clipped {
+  position: absolute;
+  left: 0;
+  clip-path: polygon(
+    604.99px 223.87px,
+    604.99px 519.71px,
+    302.5px 692.94px,
+    0px 519.71px,
+    0px 223.87px,
+    302.5px 50.64px,
+    604.99px 223.87px
+  );
+  width: 100%;
+}
+
+.blue-opacity {
+  fill: transparent;
+}
+
+.blue-opacity:hover {
+  fill: #4859ff;
+  opacity: 65%;
+}
+
+.blue-opacity2 {
+  fill: #4859ff;
+  opacity: 65%;
+}
+
+.hex-box {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.div-blue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  text-align: center;
+  background-color: transparent;
+  color: transparent;
+  height: 40vh;
+  width: 47.4vh;
+}
+
+.div-blue:hover {
+  background-color: rgba(72, 89, 255, 0.65);
+  color: white;
+}
+
+.div-blue h3 {
+  height: fit-content;
+  width: 20vh;
 }
 
 @media only screen and (min-device-width: 540px) and (max-device-width: 1366px) and (min-aspect-ratio: 1/1) and (max-aspect-ratio: 16/10) {
+  #container {
+    grid-column: 3 / -1;
+  }
+
+  #container,
+  #third {
+    width: 94.9vh;
+  }
+
   #second {
-    margin-top: calc(3.3vw * 1.229);
+    margin-top: calc(7.9vh * 1.229);
   }
 
   #third {
     flex-flow: row wrap;
-    width: 40vw;
   }
 
   .lower {
-    margin-top: calc(9.3vw * 1.229);
+    margin-top: calc(22.04vh * 1.229);
   }
 
   #third,
   .higher {
-    margin-top: calc(9.3vw * -1.229);
+    margin-top: calc(22.04vh * -1.229);
   }
 
   .hidden {

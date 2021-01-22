@@ -2,6 +2,10 @@ body {
   grid-template-rows: 25% 33% 19% 11% 12%;
 }
 
+nav {
+  background-color: transparent;
+}
+
 header {
   grid-column: 2 / 6;
   grid-row: 2 / 3;

@@ -4,7 +4,8 @@
 }
 html {
   font-size: 1vw;
-  background-color: #232222;
+  background-color: #222;
+  color: white;
 }
 
 html,
@@ -27,7 +28,6 @@ nav {
 
 a,
 h3 {
-  color: white;
   letter-spacing: 0.11em;
 }
 
@@ -35,6 +35,7 @@ a {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 1rem;
+  color: white;
   text-decoration: none;
 }
 
@@ -45,30 +46,35 @@ h3 {
 }
 
 nav {
-  align-content: center;
+  grid-template-rows: 1em 4em 1em;
   position: fixed;
   left: 0;
-  height: 7em;
+  background-color: rgba(34, 34, 34, 0.6);
+  height: 6em;
   width: 92%;
 }
 
 nav a {
+  grid-row: 2 / 3;
+  align-self: center;
   height: 1rem;
   padding: 20px 0;
 }
 
-nav a::after {
+nav a:nth-child(1)::after,
+nav a:nth-child(2)::after {
   content: "";
   display: block;
   background: #0646fc;
   width: 0;
-  height: 4px;
+  height: 0.2em;
   margin-top: 5px;
   margin-left: -5px;
   transition: width 0.5s;
 }
 
-nav a:hover::after {
+nav a:nth-child(1):hover::after,
+nav a:nth-child(2):hover::after {
   width: 110%;
 }
 
@@ -90,6 +96,16 @@ nav a:nth-child(3) {
 nav a:nth-child(4) {
   grid-column: -2 / -1;
   justify-self: end;
+  height: max-content;
+}
+
+nav a svg {
+  height: fit-content;
+  width: 100%;
+}
+
+#logo {
+  fill: white;
 }
 
 .contact-button {
@@ -102,6 +118,7 @@ nav a:nth-child(4) {
 .contact-button:hover,
 .contact-button:active {
   background-color: #0646fc;
+  fill: #0646fc;
 }
 
 @media only screen and (min-device-width: 540px) and (max-device-width: 1366px) and (min-aspect-ratio: 10/16) and (max-aspect-ratio: 16/10) {
@@ -116,15 +133,25 @@ nav a:nth-child(4) {
   }
 
   nav {
-    grid-column: 1 / 3;
-    text-align: center;
     display: flex;
     flex-direction: column;
+    text-align: center;
+    height: 100%;
+    width: 20%;
+    margin: 0;
     margin-top: 5vh;
   }
 
   nav a {
-    padding: 40px 0;
+    padding: 3em 0;
+  }
+
+  nav a svg {
+    width: 50%;
+  }
+
+  .contact-button {
+    margin-top: 3em;
   }
 }
 
