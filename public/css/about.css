@@ -3,7 +3,7 @@ body {
 }
 
 svg {
-  height: calc(47.4vh * 1.22907);
+  height: 58.2581vh;
   width: 47.4vh;
 }
 
@@ -22,7 +22,7 @@ div {
 
 #second,
 #third {
-  margin-top: calc(7.9212vh * 1.22907);
+  margin-top: 9.7304vh;
 }
 
 #third,
@@ -35,7 +35,7 @@ div {
 }
 
 .arrow {
-  height: calc(47.4vh * 0.3681);
+  height: 17.4509vh;
 }
 
 .yellow {
@@ -70,15 +70,13 @@ div {
   align-items: center;
   justify-content: center;
   position: relative;
-  /* top: 3.925vh; */
-  top: 3.92vh;
+  top: 17.48vh;
   right: 47.4vh;
   text-align: center;
   background-color: transparent;
   color: transparent;
-  height: 23.055vh;
+  height: 23.3vh;
   width: 47.4vh;
-  margin: 13.675vh 0;
   cursor: pointer;
 }
 
@@ -87,33 +85,32 @@ div {
   content: "";
   position: absolute;
   width: 0;
-  border-left: 23.84vh solid transparent;
-  border-right: 23.84vh solid transparent;
+  border-left: 23.7vh solid transparent;
+  border-right: 23.7vh solid transparent;
 }
 
 .hexagon:before {
   bottom: 100%;
-  border-bottom: 13.675vh solid transparent;
+  border-bottom: 13.5727vh solid transparent;
 }
 
 .hexagon:after {
   top: 100%;
   width: 0;
-  border-top: 13.675vh solid transparent;
+  border-top: 13.5727vh solid transparent;
 }
 
 .hexagon:hover {
-  /* background-color: rgba(72, 89, 255, 0.65); */
   background-color: rgba(6, 70, 252, 0.65);
   color: white;
 }
 
 .hexagon:hover::before {
-  border-bottom: 13.68vh solid rgba(6, 70, 252, 0.65);
+  border-bottom: 13.5727vh solid rgba(6, 70, 252, 0.65);
 }
 
 .hexagon:hover::after {
-  border-top: 13.68vh solid rgba(6, 70, 252, 0.65);
+  border-top: 13.5727vh solid rgba(6, 70, 252, 0.65);
 }
 
 .hexagon h3 {
