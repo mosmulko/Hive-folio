@@ -3,7 +3,7 @@ body {
 }
 
 svg {
-  height: calc(47.4vh * 1.229);
+  height: calc(47.4vh * 1.22907);
   width: 47.4vh;
 }
 
@@ -22,7 +22,7 @@ div {
 
 #second,
 #third {
-  margin-top: calc(7.9vh * 1.229);
+  margin-top: calc(7.9212vh * 1.22907);
 }
 
 #third,
@@ -46,64 +46,89 @@ div {
   position: absolute;
   left: 0;
   clip-path: polygon(
-    604.99px 223.87px,
-    604.99px 519.71px,
-    302.5px 692.94px,
-    0px 519.71px,
-    0px 223.87px,
-    302.5px 50.64px,
-    604.99px 223.87px
+    603.23px 223.22px,
+    603.23px 518.2px,
+    301.62px 690.93px,
+    0px 518.2px,
+    0px 223.22px,
+    301.62px 50.49px,
+    603.23px 223.22px
   );
+
   width: 100%;
-}
-
-.blue-opacity {
-  fill: transparent;
-}
-
-.blue-opacity:hover {
-  fill: #4859ff;
-  opacity: 65%;
-}
-
-.blue-opacity2 {
-  fill: #4859ff;
-  opacity: 65%;
 }
 
 .hex-box {
   position: relative;
   top: 0;
   left: 0;
+  margin-right: -47.4vh;
 }
 
-.div-blue {
+.hexagon {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 10vh;
-  left: 0;
+  position: relative;
+  /* top: 3.925vh; */
+  top: 3.92vh;
+  right: 47.4vh;
   text-align: center;
   background-color: transparent;
   color: transparent;
-  height: 40vh;
+  height: 23.055vh;
   width: 47.4vh;
+  margin: 13.675vh 0;
+  cursor: pointer;
 }
 
-.div-blue:hover {
-  background-color: rgba(72, 89, 255, 0.65);
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 23.84vh solid transparent;
+  border-right: 23.84vh solid transparent;
+}
+
+.hexagon:before {
+  bottom: 100%;
+  border-bottom: 13.675vh solid transparent;
+}
+
+.hexagon:after {
+  top: 100%;
+  width: 0;
+  border-top: 13.675vh solid transparent;
+}
+
+.hexagon:hover {
+  /* background-color: rgba(72, 89, 255, 0.65); */
+  background-color: rgba(6, 70, 252, 0.65);
   color: white;
 }
 
-.div-blue h3 {
+.hexagon:hover::before {
+  border-bottom: 13.68vh solid rgba(6, 70, 252, 0.65);
+}
+
+.hexagon:hover::after {
+  border-top: 13.68vh solid rgba(6, 70, 252, 0.65);
+}
+
+.hexagon h3 {
   height: fit-content;
   width: 20vh;
 }
 
 @media only screen and (min-device-width: 540px) and (max-device-width: 1366px) and (min-aspect-ratio: 1/1) and (max-aspect-ratio: 16/10) {
+  body {
+    grid-template-rows: auto;
+  }
+
   #container {
     grid-column: 3 / -1;
+    justify-self: start;
   }
 
   #container,
@@ -112,7 +137,7 @@ div {
   }
 
   #second {
-    margin-top: calc(7.9vh * 1.229);
+    margin-top: calc(7.9212vh * 1.229);
   }
 
   #third {
