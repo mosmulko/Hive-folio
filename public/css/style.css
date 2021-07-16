@@ -142,7 +142,7 @@ section {
 
 body {
   margin: 1.3vh 3.8vw;
-  font-size: 16px;
+  font-size: 1.7vmin;
   background-color: #232222;
 }
 
@@ -159,8 +159,8 @@ menu {
 a {
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, Tahoma, sans‑serif;
   font-weight: regular;
-  font-size: 1.25em;
-  letter-spacing: 0.1em;
+  font-size: 2.2em;
+  letter-spacing: 0.07em;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -206,7 +206,7 @@ menu #logo-nav {
   width: 7.8vmin;
   height: 8.9vmin;
   background: url(/images/logo-h.svg);
-  background-size: contain;
+  background-size: 7.8vmin 8.9vmin;
 }
 
 menu #logo-nav:hover::after {
@@ -216,12 +216,19 @@ menu #logo-nav:hover::after {
 h1 {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: regular;
-  font-size: 1.5em;
+  font-size: 3em;
   letter-spacing: 0.08em;
   line-height: 150%;
 }
 
-.button {
-  padding: 1em;
+a.button {
+  padding: 0.7em;
   background-color: #4859ff;
+}
+
+@media (min-width: 700px) and (orientation: portrait),
+  (min-height: 700px) and (orientation: landscape) {
+  body {
+    font-size: 1.3vmin;
+  }
 }
