@@ -36,3 +36,192 @@
       url("../fonts/Poppins/poppins-v15-latin-regular.svg#Poppins")
       format("svg"); /* Legacy iOS */
 }
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  margin: 1.3vh 3.8vw;
+  font-size: 16px;
+  background-color: #232222;
+}
+
+body,
+a {
+  color: rgba(255, 255, 255, 0.94);
+}
+
+body,
+menu {
+  margin: 1.3vh 3.8vw;
+}
+
+a {
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, Tahoma, sans‑serif;
+  font-weight: regular;
+  font-size: 1.25em;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  background-color: rgba(35, 34, 34, 0.7);
+}
+
+menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+
+menu a {
+  margin-left: -0.05em;
+}
+
+menu a::after {
+  content: "";
+  display: block;
+  background: #4859ff;
+  width: 0;
+  height: 0.2em;
+  margin-top: 0.2em;
+  margin-left: -0.02em;
+  transition: width 0.5s;
+}
+
+nav a:hover::after {
+  width: 99%;
+}
+
+menu #logo-nav {
+  display: block;
+  text-indent: -9999px;
+  width: 7.8vmin;
+  height: 8.9vmin;
+  background: url(/images/logo-h.svg);
+  background-size: contain;
+}
+
+menu #logo-nav:hover::after {
+  width: 0;
+}
+
+h1 {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-weight: regular;
+  font-size: 1.5em;
+  letter-spacing: 0.08em;
+  line-height: 150%;
+}
+
+.button {
+  padding: 1em;
+  background-color: #4859ff;
+}
