@@ -2,10 +2,6 @@ body {
   grid-template-rows: 25% 33% 19% 11% 12%;
 }
 
-nav {
-  background-color: transparent;
-}
-
 header {
   grid-column: 2 / 6;
   grid-row: 2 / 3;
@@ -153,4 +149,12 @@ h3 {
   .lighter {
     opacity: 25%;
   }
+}
+
+#hive-illustration {
+  width: 68.32vmin;
+  position: absolute;
+  top: -6.56vmin;
+  right: 1.3vh;
+  z-index: 20;
 }
