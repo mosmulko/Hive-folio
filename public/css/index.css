@@ -1,160 +1,24 @@
-body {
-  grid-template-rows: 25% 33% 19% 11% 12%;
+.box--dark-theme {
+  color: rgba(255, 255, 255, 0.94);
+  background-color: #222;
 }
 
-header {
-  grid-column: 2 / 6;
-  grid-row: 2 / 3;
-  align-self: end;
-  width: 88%;
+.layout {
+  display: flex;
+  flex-direction: column;
 }
 
-h3 {
-  grid-column: 4 / -1;
-  grid-row: 3 / 4;
-  align-self: start;
+.masthead {
+  height: 45%;
 }
 
-#graphic {
-  grid-column: 6 / -2;
-  grid-row: 1 / 5;
-  justify-self: end;
-  align-self: center;
-  width: 90%;
-  margin-top: -8vh;
+.content {
+  flex-grow: 2;
+  background-color: tomato;
 }
 
-.contact-button {
-  grid-column: 4 / -2;
-  grid-row: 3 / 6;
-  align-self: center;
-}
-
-.cls-1,
-.cls-2,
-.cls-3,
-.cls-4,
-.cls-5 {
-  opacity: 0.6;
-}
-
-.cls-1 {
-  fill: #ed1c24;
-}
-.cls-2 {
-  fill: #f15a24;
-}
-.cls-3 {
-  fill: #ff931e;
-}
-.cls-4 {
-  fill: #ffb41f;
-}
-.cls-5 {
-  fill: #e82a21;
-}
-
-@media only screen and (max-device-width: 1150px) and (min-aspect-ratio: 17/10) {
-  h3,
-  .contact-button {
-    grid-column: 3 / -1;
+@media only screen and (orientation: landscape) {
+  .masthead {
+    height: 30%;
   }
-
-  .contact-button {
-    grid-row: 4 / 5;
-    /* align-self: end; */
-  }
-}
-
-@media only screen and (min-device-width: 540px) and (max-device-width: 1366px) and (min-aspect-ratio: 10/16) and (max-aspect-ratio: 16/10) {
-  body {
-    grid-template-rows: 68% 8% 24%;
-  }
-
-  header {
-    grid-column: 1 / 4;
-    grid-row: 1 / 2;
-    align-self: end;
-    justify-self: end;
-    width: 90%;
-  }
-
-  h3 {
-    grid-column: 2 / -1;
-    grid-row: 2 / 3;
-    align-self: end;
-  }
-
-  #graphic {
-    grid-column: 3 / -1;
-    grid-row: 1 / 2;
-    align-self: center;
-    justify-self: end;
-    width: 95%;
-    max-width: 67vh;
-    margin: 0;
-  }
-
-  .contact-button {
-    grid-column: 1 / -1;
-    grid-row: 3 / 4;
-    align-self: center;
-    justify-self: center;
-    margin-top: -3%;
-  }
-}
-
-@media only screen and (max-device-width: 539px) {
-  body {
-    display: grid;
-    grid-template-columns: 4% 92% 4%;
-    grid-template-rows: 1fr 110vw 10vw 3fr;
-  }
-
-  header {
-    grid-column: 2 / -2;
-    grid-row: 2 /3;
-    align-self: start;
-    justify-self: center;
-    width: 58vw;
-    margin-top: 33vw;
-    margin-left: -7vw;
-  }
-
-  h3 {
-    grid-column: 1 / -1;
-    grid-row: 2 / 4;
-    align-self: end;
-    justify-self: center;
-    text-align: center;
-    margin-bottom: 28vw;
-  }
-
-  #graphic {
-    grid-column: 1 / -1;
-    grid-row: 2 /4;
-    align-self: start;
-    justify-self: center;
-    width: 100vw;
-    margin: 0;
-  }
-
-  .contact-button {
-    grid-column: 2 / -2;
-    grid-row: 3 / 5;
-    align-self: center;
-    justify-self: center;
-  }
-
-  .lighter {
-    opacity: 25%;
-  }
-}
-
-#hive-illustration {
-  width: 68.32vmin;
-  position: absolute;
-  top: -6.56vmin;
-  right: 1.3vh;
-  z-index: 20;
 }
