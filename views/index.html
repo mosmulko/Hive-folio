@@ -8,28 +8,28 @@
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/index.css">
 </head>
-<body>
-  <header>
-    <nav>
-      <menu>
-        <li><a href='/home' id='logo-nav'></a></li>
-        <li><a href='/about'>About us</a></li>
-        <li><a href='/projects'>Projects</a></li>
-        <li><a href='/contact'>Contact</a></li>
+<body class='layout box--dark-theme'>
+  <header class='layout__item masthead'>
+    <nav class='layout__item primary-nav'>
+      <menu class='primary-nav__list'>
+        <li class='primary-nav__item primary-nav__item--first'><a href='/home' class='primary-nav__item--logo'></a></li>
+        <li class='primary-nav__item'><a href='/about' class='primary-nav__item--text link'>About us</a></li>
+        <li class='primary-nav__item'><a href='/projects' class='primary-nav__item--text link'>Projects</a></li>
+        <li class='primary-nav__item'><a href='/contact' class='primary-nav__item--text link'>Contact</a></li>
       </menu>
     </nav>
   </header>
   
-  <figure id='hive-illustration'>
+  <!-- <figure>
     <img src='/images/hive-illustration.svg' alt='An abstract illustration of a construction designed to look like a beehive.'>
-  </figure>
+  </figure> -->
   
-  <main>
-    <img id='logo' src='/images/logo.svg' alt='Logo of the company name'>
-    <h1>M&E and Environmental<br>
+  <main class='layout__item content'>
+    <!-- <img id='logo' src='/images/logo.svg' alt='Logo of the company name'> -->
+    <h1 class='subheader'>M&E and Environmental<br>
       Engeneering Design</h1>
+    <a href="/contact" class="btn btn--action link">Let's connect</a>
   </main>
-  <a href="/contact" class="button">Let's connect</a>
-  <footer></footer>
+  <footer class='layout__item bottom-info'></footer>
 </body>
 </html>
