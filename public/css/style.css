@@ -40,32 +40,15 @@
 }
 
 body {
-  margin: 1.3vh 3.8vw;
   font-size: 1.7vmin;
-  /* background-color: #232222; */
 }
 
-body,
-a {
-  color: rgba(255, 255, 255, 0.94);
+.layout__item {
+  margin: 0 4%;
 }
 
-body,
-menu {
-  margin: 1.3vh 3.8vw;
-}
-
-a {
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, Tahoma, sans‑serif;
-  font-weight: regular;
-  font-size: 2.2em;
-  letter-spacing: 0.07em;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-nav {
-  width: 100%;
+.primary-nav {
+  width: 92%;
   position: fixed;
   top: 0;
   left: 0;
@@ -73,33 +56,28 @@ nav {
   background-color: rgba(35, 34, 34, 0.7);
 }
 
-menu {
+.primary-nav__list {
   display: flex;
   justify-content: space-between;
   align-items: center;
   list-style-type: none;
 }
 
-menu a {
-  margin-left: -0.05em;
+@media only screen and (orientation: landscape) {
+  .primary-nav__list {
+    justify-content: start;
+  }
 }
 
-menu a::after {
-  content: "";
-  display: block;
-  background: #4859ff;
-  width: 0;
-  height: 0.2em;
-  margin-top: 0.2em;
-  margin-left: -0.02em;
-  transition: width 0.5s;
+.primary-nav__item {
+  padding: 0.4em 2%;
 }
 
-nav a:hover::after {
-  width: 99%;
+.primary-nav__item--first {
+  padding-left: 0;
 }
 
-menu #logo-nav {
+.primary-nav__item--logo {
   display: block;
   text-indent: -9999px;
   width: 7.8vmin;
@@ -108,11 +86,46 @@ menu #logo-nav {
   background-size: 7.8vmin 8.9vmin;
 }
 
-menu #logo-nav:hover::after {
-  width: 0;
+.primary-nav__item--text {
+  display: inline-block;
+  padding-top: 0.4em;
 }
 
-h1 {
+.primary-nav__item--text::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0.2em;
+  margin-top: 0.2em;
+  margin-left: -0.02em;
+  background: #4859ff;
+  transition: width 0.5s;
+}
+
+.primary-nav__item--text:hover::after {
+  width: 99%;
+}
+
+.primary-nav__item--logo {
+  display: block;
+  text-indent: -9999px;
+  width: 7.8vmin;
+  height: 8.9vmin;
+  background: url(/images/logo-h.svg);
+  background-size: 7.8vmin 8.9vmin;
+}
+
+.link {
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, Tahoma, sans‑serif;
+  font-weight: regular;
+  font-size: 2.2em;
+  letter-spacing: 0.07em;
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.subheader {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: regular;
   font-size: 3em;
@@ -120,9 +133,14 @@ h1 {
   line-height: 150%;
 }
 
-a.button {
+.btn--action {
   padding: 0.7em;
   background-color: #4859ff;
+}
+
+.bottom-info {
+  height: 5vmin;
+  background-color: teal;
 }
 
 @media (min-width: 700px) and (orientation: portrait),
