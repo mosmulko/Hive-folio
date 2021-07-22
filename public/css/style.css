@@ -140,12 +140,24 @@ body {
 
 .bottom-info {
   height: 5vmin;
-  background-color: teal;
 }
 
-@media (min-width: 700px) and (orientation: portrait),
-  (min-height: 700px) and (orientation: landscape) {
+@media (min-width: 550px) and (orientation: portrait),
+  (min-height: 550px) and (orientation: landscape) {
   body {
-    font-size: 1.3vmin;
+    font-size: 1.35vmin;
+  }
+
+  .primary-nav__item--logo {
+    width: 5vmin;
+    height: 5.705vmin;
+    background-size: 5vmin 5.705vmin;
+  }
+}
+
+@media (min-width: 850px) and (orientation: portrait),
+  (min-height: 850px) and (orientation: landscape) {
+  body {
+    font-size: 1vmin;
   }
 }
