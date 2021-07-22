@@ -9,11 +9,18 @@
 }
 
 .layout__masthead {
-  height: 45%;
+  height: 50%;
 }
 
 .layout__content {
   flex-grow: 2;
+}
+
+.background-image {
+  width: 75vmin;
+  position: absolute;
+  top: -6.56vmin;
+  right: 4%;
 }
 
 .content {
@@ -36,8 +43,32 @@
   align-self: center;
 }
 
-@media only screen and (orientation: landscape) {
-  .masthead {
+@media only screen and (min-aspect-ratio: 5/8) {
+  .background-image {
+    width: 68.32vmin;
+    top: -12.06vmin;
+    right: -6.16vw;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-aspect-ratio: 11/9) {
+  .layout__masthead {
     height: 30%;
+  }
+
+  .content {
+    grid-template-columns: 31.26vmin 22.42vmin 1fr;
+    grid-template-rows: 28.2vmin 5.63vmin 1fr;
+  }
+
+  .content__btn {
+    margin-top: 7vmin;
+  }
+
+  .background-image {
+    width: 68.32vmin;
+    top: -12.06vmin;
+    right: -5.5vw;
+    z-index: 50;
   }
 }
