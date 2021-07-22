@@ -8,13 +8,32 @@
   flex-direction: column;
 }
 
-.masthead {
+.layout__masthead {
   height: 45%;
 }
 
-.content {
+.layout__content {
   flex-grow: 2;
-  background-color: tomato;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 25.48vmin 18.27vmin 1fr;
+  grid-template-rows: 23.17vmin 4.62vmin 1fr;
+}
+
+.content__heading {
+  grid-area: 1 / 1 / 3 / 3;
+}
+
+.content__subheading {
+  grid-area: 2 / 2 / 4 / 4;
+}
+
+.content__btn {
+  grid-area: 3 / 1 / 4 / 4;
+  justify-self: center;
+  align-self: center;
 }
 
 @media only screen and (orientation: landscape) {
