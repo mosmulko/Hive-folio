@@ -48,7 +48,8 @@ body {
 }
 
 .primary-nav {
-  width: 92%;
+  width: 92vw;
+  padding: 1% 4vw;
   position: fixed;
   top: 0;
   left: 0;
@@ -75,6 +76,10 @@ body {
 
 .primary-nav__item--first {
   padding-left: 0;
+}
+
+.primary-nav__item--last {
+  padding-right: 0;
 }
 
 .primary-nav__item--logo {
