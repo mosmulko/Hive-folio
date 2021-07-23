@@ -43,6 +43,11 @@ body {
   font-size: 1.7vmin;
 }
 
+.box--dark-theme {
+  color: rgba(255, 255, 255, 0.94);
+  background-color: #222;
+}
+
 .layout__item {
   margin: 0 4%;
 }
@@ -54,6 +59,9 @@ body {
   top: 0;
   left: 0;
   z-index: 50;
+}
+
+.primary-nav--dark-theme {
   background-color: rgba(35, 34, 34, 0.7);
 }
 
