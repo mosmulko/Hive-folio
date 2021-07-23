@@ -82,7 +82,7 @@ body {
   padding: 0.4em 2%;
 }
 
-.primary-nav__item--first {
+.primary-nav__item.primary-nav__item--first {
   padding-left: 0;
 }
 
@@ -184,5 +184,20 @@ body {
 }
 
 @media only screen and (min-aspect-ratio: 8/5) {
-  /* add some margins and extra padding to nav items */
+  .layout__item {
+    margin: 0 5%;
+  }
+
+  .primary-nav {
+    width: 90vw;
+    padding: 1% 5vw;
+  }
+
+  .primary-nav__item {
+    padding: 0.4em 3%;
+  }
+
+  .subheader {
+    font-size: 3em;
+  }
 }

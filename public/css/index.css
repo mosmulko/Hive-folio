@@ -74,7 +74,7 @@
 
 @media only screen and (min-aspect-ratio: 8/5) {
   .layout__content {
-    margin-left: calc(8% + 5vmin);
+    margin: 0 calc(10% + 5vmin);
   }
 
   .content {
@@ -83,6 +83,6 @@
   }
 
   .background-image {
-    right: 4%;
+    right: 5%;
   }
 }
