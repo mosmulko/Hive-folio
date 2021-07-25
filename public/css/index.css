@@ -91,6 +91,7 @@
 
 .content__subheading {
   grid-area: 2 / 2 / 4 / 4;
+  margin-top: -1.5vmin;
 }
 
 .content__btn {
