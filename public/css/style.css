@@ -119,14 +119,19 @@ body {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 2.6em;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   line-height: 150%;
 }
+
+/**
+ * Same font size and letter-spacing as .primary-nav__item--text
+ * change both for consistency or move this style to .link
+ */
 
 .btn {
   padding: 0.9em;
   font-size: 2.2em;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.08em;
 }
 
 .btn:hover {
@@ -205,7 +210,7 @@ body {
   display: inline-block;
   padding-top: 0.4em;
   font-size: 2.2em;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.08em;
   overflow: hidden;
 }
 
