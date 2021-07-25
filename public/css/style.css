@@ -1,4 +1,24 @@
+/*------------------------------------*\
+  #ANOTHER-SECTION
+\*------------------------------------*/
+
+/**
+ * Comment
+ */
+
+/**
+ * Comment
+ */
+
 @import "normalize.css";
+
+/*------------------------------------*\
+  #CUSTOM-FONTS
+\*------------------------------------*/
+
+/**
+ * Comment
+ */
 
 /* roboto-regular - latin */
 @font-face {
@@ -135,7 +155,7 @@ body {
 
 .link {
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, Tahoma, sans‑serif;
-  font-weight: regular;
+  font-weight: 400;
   color: inherit;
   text-decoration: none;
   text-transform: uppercase;
@@ -143,7 +163,7 @@ body {
 
 .subheader {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
-  font-weight: regular;
+  font-weight: 400;
   font-size: 2.6em;
   letter-spacing: 0.08em;
   line-height: 150%;
@@ -159,7 +179,7 @@ body {
   filter: contrast(175%) brightness(103%);
 }
 
-.btn--action {
+.btn--primary {
   background-color: #4859ff;
 }
 
