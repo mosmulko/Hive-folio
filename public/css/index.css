@@ -118,6 +118,11 @@
     grid-template-rows: 31.23vmin 6.23vmin 1fr;
   }
 
+  /**
+ * Lower button by 50% of bottom-info height (in style.css), 
+ * so it appears in the middle between heading and bottom
+ * of the screen
+ */
   .content__btn {
     margin-top: 2.5vmin;
   }
@@ -127,7 +132,13 @@
   }
 }
 
-@media only screen and (min-aspect-ratio: 8/5) {
+@media only screen and (min-aspect-ratio: 13/9) {
+  .background-image {
+    right: 4%;
+  }
+}
+
+@media only screen and (min-aspect-ratio: 7/4) {
   .layout__content {
     margin: 0 calc(10% + 5vmin);
   }
