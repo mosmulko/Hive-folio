@@ -63,10 +63,20 @@
 /**
  * Main content display is set to grid. Columns and rows
  * depend on the content_heading size. For portrait it's
- * 
- * 
- * 
- * 
+ * 43.75vw width and 27.79vw height, for wide landscape it's
+ * 59.44vh width and 37.46vh height.  
+ * Columns:
+ ** 1st col is 58.24% heading's width, 
+ ** 2nd is remaining 41.76%
+ * - this way subheading lines up with heading's 'V'
+ ** 3rd is the rest of screen width
+ *
+ * Rows:
+ ** 1st row equals 83.37% of heading's height
+ * - visually it creates same white space between the logo 
+ * and 2nd row as between 'H' and hexagon
+ ** 2nd row is remaining 16.63 % of heading
+ ** 3rd row is rest of the content's height
  */
 
 .content {
