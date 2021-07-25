@@ -155,6 +155,10 @@ body {
   letter-spacing: 0.07em;
 }
 
+.btn:hover {
+  filter: contrast(175%) brightness(103%);
+}
+
 .btn--action {
   background-color: #4859ff;
 }
