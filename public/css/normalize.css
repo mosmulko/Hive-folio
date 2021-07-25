@@ -458,11 +458,14 @@ section {
 }
 
 /**
- * Make the document be 100% of the screen by default
+ * Add my own personal reset styles:
+ ** Make page as wide as screen
+ ** Don't display scrollbar if content goes outside the page
  */
 
 html,
 body {
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
 }
