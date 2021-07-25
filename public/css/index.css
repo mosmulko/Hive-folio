@@ -1,3 +1,24 @@
+/**
+ * This is a stylesheet for the landing page- index.html
+ * It only includes styles for the elements and layout
+ * specific to this subpage. It's depandable on styles.css
+ */
+
+/*------------------------------------*\
+  #LANDING-PAGE-LAYOUT
+\*------------------------------------*/
+
+/**
+ * Landing page cannot be scrollable and that's why flex
+ * column is used as display. Masthead (header) takes up 
+ * 50% of screen height or 30% if screen ratio is bigger
+ * than 4/3 (wide screens). Content (main) takes up all the
+ * remaining space using flex grow.
+ * 
+ * Note- bottom-info (footer) height and both masthead
+ * and content margins are set in the style.css.
+ */
+
 .layout {
   display: flex;
   flex-direction: column;
@@ -11,12 +32,42 @@
   flex-grow: 2;
 }
 
+/*------------------------------------*\
+  #HIVE-ILLUSTRATION
+\*------------------------------------*/
+
+/**
+ * While in mobile portrait mode img is bigger (more space
+ * to fill) and lower (due to primary-nav being on top).
+ * In other screen sizes and orientations img needs to be
+ * smaller, painted above the primary-nav (z-index higher)
+ * and due to this placed higher.
+ * 
+ * When it's displayed on tablet, img needs to be cropped 
+ * from the right due to limited space (aspect ratio close
+ * to 1). On other devices right property is same as layout
+ * margin.
+ */
+
 .background-image {
   width: 75vmin;
   position: absolute;
   top: -6.56vmin;
   right: 4%;
 }
+
+/*------------------------------------*\
+  #MAIN-CONTENT
+\*------------------------------------*/
+
+/**
+ * Main content display is set to grid. Columns and rows
+ * depend on the content_heading size. For portrait it's
+ * 
+ * 
+ * 
+ * 
+ */
 
 .content {
   display: grid;
@@ -52,8 +103,8 @@
   }
 
   .content {
-    grid-template-columns: 31.26vmin 22.42vmin 1fr;
-    grid-template-rows: 28.2vmin 5.63vmin 1fr;
+    grid-template-columns: 34.68vmin 24.76vmin 1fr;
+    grid-template-rows: 31.23vmin 6.23vmin 1fr;
   }
 
   .content__btn {
@@ -65,21 +116,9 @@
   }
 }
 
-@media only screen and (min-aspect-ratio: 12/8) {
-  .content {
-    grid-template-columns: 34.68vmin 24.76vmin 1fr;
-    grid-template-rows: 31.23vmin 6.23vmin 1fr;
-  }
-}
-
 @media only screen and (min-aspect-ratio: 8/5) {
   .layout__content {
     margin: 0 calc(10% + 5vmin);
-  }
-
-  .content {
-    grid-template-columns: 34.68vmin 24.76vmin 1fr;
-    grid-template-rows: 31.23vmin 6.23vmin 1fr;
   }
 
   .background-image {
