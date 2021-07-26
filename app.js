@@ -14,9 +14,9 @@ app.use(express.static(path.join(__dirname, "public")));
 app.set("views", "./src/views");
 app.set("view engine", "ejs");
 
-const projectRouter = require("./src/routes/projectRoutes")();
+// const projectRouter = require("./src/routes/projectRoutes")();
 
-app.use("/projects", projectRouter);
+// app.use("/projects", projectRouter);
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "index.html"));
@@ -26,6 +26,9 @@ app.get("/contact", (req, res) => {
 });
 app.get("/about", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "about.html"));
+});
+app.get("/projects", (req, res) => {
+  res.sendFile(path.join(__dirname, "views", "gallery.html"));
 });
 
 app.listen(port, () => {
