@@ -37,7 +37,7 @@
   height: max-content;
 }
 
-svg {
+.card__frame {
   height: 58.2581vh;
   width: 47.4vh;
 }
