@@ -64,7 +64,8 @@
  * Main content display is set to grid. Columns and rows
  * depend on the content_heading size. For portrait it's
  * 43.75vw width and 27.79vw height, for wide landscape it's
- * 59.44vh width and 37.46vh height.  
+ * 55.88vh width and 35.49vh height. Heading's height equals
+ * to 63.52% of it's width. 
  * Columns:
  ** 1st col is 58.24% heading's width, 
  ** 2nd is remaining 41.76%
@@ -88,6 +89,13 @@
 .content__heading {
   grid-area: 1 / 1 / 3 / 3;
 }
+
+/**
+ * Subheading should line up with heading's 'V' from left
+ * and 2nd row from top. Due to line height's extra space
+ * use margin-top to line up subheading's letters with 
+ * the row.
+ */
 
 .content__subheading {
   grid-area: 2 / 2 / 4 / 4;
@@ -114,8 +122,8 @@
   }
 
   .content {
-    grid-template-columns: 34.68vmin 24.76vmin 1fr;
-    grid-template-rows: 31.23vmin 6.23vmin 1fr;
+    grid-template-columns: 32.54vmin 23.34vmin 1fr;
+    grid-template-rows: 29.59vmin 5.9vmin 1fr;
   }
 
   /**
@@ -131,6 +139,12 @@
     z-index: 50;
   }
 }
+
+/**
+ * Lower button by 50% of bottom-info height (in style.css), 
+ * so it appears in the middle between heading and bottom
+ * of the screen
+ */
 
 @media only screen and (min-aspect-ratio: 13/9) {
   .background-image {
