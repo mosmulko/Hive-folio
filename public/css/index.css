@@ -26,6 +26,7 @@
 
 .layout__masthead {
   height: 50%;
+  flex: 0 0 50%;
 }
 
 .layout__content {
@@ -146,6 +147,7 @@
 
   .layout__masthead {
     height: 30%;
+    flex: 0 0 30%;
   }
 
   .content {

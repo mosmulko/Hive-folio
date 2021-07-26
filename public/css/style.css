@@ -243,8 +243,13 @@ body {
   #FOOTER
 \*------------------------------------*/
 
+/**
+ * Add flex property if body's display is flex
+ */
+
 .bottom-info {
-  height: 5vmin;
+  height: 5vh;
+  flex: 0 0 5vh;
 }
 
 /*------------------------------------*\
