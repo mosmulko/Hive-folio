@@ -149,7 +149,7 @@ section {
   border-top: 13.5727vh solid rgba(6, 70, 252, 0.65);
 }
 
-.hexagon h3 {
+.card__subheading {
   height: fit-content;
   width: 20vh;
 }
