@@ -247,6 +247,10 @@ body {
   #MEDIA-QUERIES
 \*------------------------------------*/
 
+/*------------------------------------*\
+  #FONT-MEDIA-QUERIES
+\*------------------------------------*/
+
 /**
  * As font size is set as vmin, media queries need to be set seperate for both
  * width in portrait and height in landscape mode.
@@ -272,6 +276,10 @@ body {
   }
 }
 
+/*------------------------------------*\
+  #VERY-WIDE-SCREENS
+\*------------------------------------*/
+
 /**
  * When website is in the landscape orientation (not on tablet though) 
  * the margins and padding needs to slightly increase for better composition. 
@@ -290,6 +298,10 @@ body {
     padding: 1% 5vw;
   }
 
+  /**
+  * nav item padding bigger by 0.3% than margin to fill up
+  * more space. Aesthetic reasons.
+  */
   .primary-nav__item {
     padding: 0.4em 3%;
   }

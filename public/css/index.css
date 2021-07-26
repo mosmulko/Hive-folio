@@ -102,13 +102,33 @@
   margin-top: -1.5vmin;
 }
 
+/**
+ * Lower button by 50% of bottom-info height (in style.css), 
+ * so it appears in the middle between heading and bottom
+ * of the screen
+ */
+
 .content__btn {
   grid-area: 3 / 1 / 4 / 4;
   justify-self: center;
   align-self: center;
+  margin-top: 2.5vmin;
 }
 
+/*------------------------------------*\
+  #MAIN-CONTENT
+\*------------------------------------*/
+
+/*------------------------------------*\
+  #TABLET-VIEW
+\*------------------------------------*/
+
 @media only screen and (min-aspect-ratio: 5/8) {
+  /**
+ * Background image should extend behind the page when on
+ * tablet to allow other elements to fit on the page.
+ */
+
   .background-image {
     width: 68.32vmin;
     top: -12.06vmin;
@@ -117,6 +137,13 @@
 }
 
 @media only screen and (min-aspect-ratio: 11/9) {
+  /**
+ * When on landscape orientation masthead should take less
+ * space so now bigger heading can appear to be in the 
+ * middle of the screen.
+ * 
+ */
+
   .layout__masthead {
     height: 30%;
   }
@@ -126,35 +153,42 @@
     grid-template-rows: 29.59vmin 5.9vmin 1fr;
   }
 
-  /**
- * Lower button by 50% of bottom-info height (in style.css), 
- * so it appears in the middle between heading and bottom
- * of the screen
- */
-  .content__btn {
-    margin-top: 2.5vmin;
-  }
-
   .background-image {
     z-index: 50;
   }
 }
 
-/**
- * Lower button by 50% of bottom-info height (in style.css), 
- * so it appears in the middle between heading and bottom
- * of the screen
- */
+/*------------------------------------*\
+  #WIDE-SCREENS
+\*------------------------------------*/
 
 @media only screen and (min-aspect-ratio: 13/9) {
+  /**
+ * With wider screens background-image right position
+ * should be same as layout-items margin.
+ */
+
   .background-image {
     right: 4%;
   }
 }
 
+/*------------------------------------*\
+  #VERY-WIDE-SCREENS
+\*------------------------------------*/
+
 @media only screen and (min-aspect-ratio: 7/4) {
+  /**
+ * With very wide screens heading needs to be brought
+ * closer to the center for composition purpose. This 
+ * margin allows it to be line up with the first text 
+ * navigation link. Margin equals to layout margin + 
+ * primary-nav__item--logo width + primary-nav__item 
+ * padding (minus 0.5% for visual effect).
+ */
+
   .layout__content {
-    margin: 0 calc(10% + 5vmin);
+    margin: 0 calc(10.5% + 5vmin);
   }
 
   .background-image {
