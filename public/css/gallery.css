@@ -1,5 +1,40 @@
-body {
-  grid-template-rows: 14.6vh auto;
+/**
+ * This is a stylesheet for the gallery page- gallery.html
+ * It only includes styles for the elements and layout
+ * specific to this subpage. It's depandable on styles.css
+ */
+
+/*------------------------------------*\
+  #GALLERY-PAGE-LAYOUT
+\*------------------------------------*/
+
+/**
+ * Page layout has only 3 blocks: masthead is only slightly
+ * bigger than primary-nav to allow for some space between the
+ * primary-nav and gallery, gallery is as big as it's content
+ * and footer.
+ * 
+ * Note- primary-nav, bottom-info (footer) height and both masthead
+ * and gallery margins are set in the style.css.
+ */
+
+.layout {
+  display: block;
+  overscroll-behavior: contain;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.layout__masthead {
+  height: 15vh;
+  flex: 0 0 15vh;
+}
+
+.layout__gallery {
+  height: max-content;
 }
 
 svg {
@@ -7,15 +42,16 @@ svg {
   width: 47.4vh;
 }
 
-div {
+div,
+section {
   display: flex;
   height: max-content;
 }
 
 #container {
-  grid-column: 1 / -1;
+  /* grid-column: 1 / -1;
   grid-row: 2 / 3;
-  justify-self: center;
+  justify-self: center; */
   flex-flow: row wrap;
   width: 142.2vh;
 }
@@ -153,7 +189,4 @@ div {
   .hidden {
     display: none;
   }
-}
-
-@media only screen and (min-device-width: 540px) and (max-device-width: 1366px) and (min-aspect-ratio: 10/16) and (max-aspect-ratio: 1/1) {
 }
