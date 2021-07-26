@@ -135,7 +135,7 @@ body {
 }
 
 .btn:hover {
-  filter: contrast(175%) brightness(103%);
+  filter: contrast(150%);
 }
 
 .btn--primary {
