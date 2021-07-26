@@ -78,7 +78,6 @@
  * are media queries that gradually decrease the vmin units as the vmin
  * equivalent in px grows.
  */
-
 body {
   font-size: 1.7vmin;
 }
@@ -146,9 +145,14 @@ body {
   #TOP-NAVIGATION
 \*------------------------------------*/
 
+/* ::-webkit-scrollbar {
+  width: 40px;
+} */
+
 .primary-nav {
-  width: 92vw;
-  padding: 1% 4vw;
+  width: 92%;
+  padding: 1% 0;
+  margin: 0 4%;
   position: fixed;
   top: 0;
   left: 0;
@@ -295,7 +299,7 @@ body {
 
   .primary-nav {
     width: 90vw;
-    padding: 1% 5vw;
+    margin: 0 5vw;
   }
 
   /**
