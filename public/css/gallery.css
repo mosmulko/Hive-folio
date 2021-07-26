@@ -101,7 +101,7 @@ section {
   margin-right: -47.4vh;
 }
 
-.hexagon {
+.card__background-on-hover {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -116,8 +116,8 @@ section {
   cursor: pointer;
 }
 
-.hexagon:before,
-.hexagon:after {
+.card__background-on-hover:before,
+.card__background-on-hover:after {
   content: "";
   position: absolute;
   width: 0;
@@ -125,27 +125,27 @@ section {
   border-right: 23.7vh solid transparent;
 }
 
-.hexagon:before {
+.card__background-on-hover:before {
   bottom: 100%;
   border-bottom: 13.5727vh solid transparent;
 }
 
-.hexagon:after {
+.card__background-on-hover:after {
   top: 100%;
   width: 0;
   border-top: 13.5727vh solid transparent;
 }
 
-.hexagon:hover {
+.card__background-on-hover:hover {
   background-color: rgba(6, 70, 252, 0.65);
   color: white;
 }
 
-.hexagon:hover::before {
+.card__background-on-hover:hover::before {
   border-bottom: 13.5727vh solid rgba(6, 70, 252, 0.65);
 }
 
-.hexagon:hover::after {
+.card__background-on-hover:hover::after {
   border-top: 13.5727vh solid rgba(6, 70, 252, 0.65);
 }
 
