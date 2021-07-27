@@ -75,13 +75,31 @@
   display: none;
 }
 
+/*------------------------------------*\
+  #CARD
+\*------------------------------------*/
+
 .gallery__card {
   display: flex;
   width: 100%;
 }
 
+.card__img {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  clip-path: polygon(
+    603.23px 223.22px,
+    603.23px 518.2px,
+    301.62px 690.93px,
+    0px 518.2px,
+    0px 223.22px,
+    301.62px 50.49px,
+    603.23px 223.22px
+  );
+}
 /*------------------------------------*\
-  #GALLERY-LAYOUT
+  #MEDIA-QUERIES
 \*------------------------------------*/
 
 @media only screen and (min-width: 600px) and (max-width: 1100px),
@@ -93,11 +111,6 @@
  * have a width of card's height * 81.362% times 2 columns. First 2 columns then
  * have width changed to 50% and last section becomes a row.
  */
-
-  /* .gallery {
-    width: calc(85vh * 0.81362 * 2);
-    margin: 0 auto;
-  } */
 
   .gallery__section--column {
     width: 50%;
