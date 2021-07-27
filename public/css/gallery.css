@@ -1,7 +1,8 @@
 /**
  * This is a stylesheet for the gallery page- gallery.html
  * It only includes styles for the elements and layout
- * specific to this subpage. It's depandable on styles.css
+ * specific to this subpage. It's depandable on styles.css.
+ * Starts with mobile portrait view.
  */
 
 /*------------------------------------*\
@@ -54,6 +55,8 @@
  ** very wide screens - desktop:
  *** each section is displayed as a column, which are organised side by side
  *** with first cards of side columns being fully visible in the viewport.
+ *
+ * Note: each card's width == 81.362% * height && height == 122.9% * width
  */
 
 .gallery {
@@ -65,12 +68,58 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: lavender;
+}
+
+.gallery__filler {
+  display: none;
 }
 
 .gallery__card {
   display: flex;
   width: 100%;
-  padding-bottom: 122.9%;
-  border-bottom: 1px solid lightcoral;
+}
+
+@media only screen and (orientation: landscape) {
+  /**
+ * 2 columns layout:
+ * for the 1st card of the middle section to be fully visible in the viewport
+ * it has to have a height of 100vh - masthead height. Gallery then needs to
+ * have a width of card's height * 81.362% times 2 columns. First 2 columns then
+ * have width changed to 50% and last section becomes a row.
+ */
+
+  .gallery {
+    width: calc(85vh * 0.81362 * 2);
+    margin: 0 auto;
+  }
+  .gallery__section--column {
+    width: 50%;
+  }
+
+  .gallery__section--fluid {
+    flex-flow: row wrap;
+  }
+
+  /**
+ * Because last section still has 100% width of gallery all elements inside
+ * need to have width 50% of the section to appear like they are part of the
+ * 2 columns.
+ */
+
+  .section-fluid__item {
+    width: 50%;
+  }
+
+  /**
+ * First and last fillers are now visible while last filler needs to be on
+ * right if there's an equal num of cards
+ */
+
+  .gallery__filler--edges {
+    display: block;
+  }
+
+  .gallery__filler--right {
+    margin-left: auto;
+  }
 }
