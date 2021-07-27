@@ -92,6 +92,7 @@
     width: calc(85vh * 0.81362 * 2);
     margin: 0 auto;
   }
+
   .gallery__section--column {
     width: 50%;
   }
@@ -111,6 +112,22 @@
   }
 
   /**
+ * For visual composition first section needs to be lowered by 20.528% of it's
+ * own width (which is 50% of it's parent).
+ * Every item on the right in the last section needs to be moved higher by 
+ * that 20.528% + a height of the filler which is equal to 36.815% of the section
+ * width.
+ */
+
+  .gallery__section--first {
+    margin-top: calc(20.528% / 2);
+  }
+
+  .section-fluid__item--higher {
+    margin-top: calc(calc(20.528% + 36.815%) * -1);
+  }
+
+  /**
  * First and last fillers are now visible while last filler needs to be on
  * right if there's an equal num of cards
  */
@@ -119,7 +136,12 @@
     display: block;
   }
 
+  /**
+ * The margin value comes from dividing filler's height by 2 and adding 20.528
+ * of it's width.
+ */
   .gallery__filler--right {
+    margin-top: calc(calc(calc(36.815% / 2) + 20.528%) * -1);
     margin-left: auto;
   }
 }
