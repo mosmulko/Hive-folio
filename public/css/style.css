@@ -164,8 +164,8 @@ body {
 
 .primary-nav {
   width: 92%;
-  padding: 1% 0;
-  margin: 0 4%;
+  padding: 1% 4%;
+  /* margin: 0 4%; */
   position: fixed;
   top: 0;
   left: 0;
