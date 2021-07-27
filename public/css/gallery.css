@@ -42,16 +42,14 @@
   width: 47.4vh;
 }
 
-div,
-section {
+article,
+section,
+div {
   display: flex;
   height: max-content;
 }
 
 #container {
-  /* grid-column: 1 / -1;
-  grid-row: 2 / 3;
-  justify-self: center; */
   flex-flow: row wrap;
   width: 142.2vh;
 }
