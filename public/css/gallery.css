@@ -19,11 +19,6 @@
  */
 
 .layout {
-  display: block;
-  overscroll-behavior: contain;
-}
-
-.layout {
   display: flex;
   flex-direction: column;
 }
@@ -37,6 +32,7 @@
   height: max-content;
 }
 
+svg,
 .card__frame {
   height: 58.2581vh;
   width: 47.4vh;
@@ -54,13 +50,12 @@ div {
   width: 142.2vh;
 }
 
-#second,
-#third {
+.gallery__section--desktop-sides {
   margin-top: 9.7304vh;
 }
 
-#third,
-.column {
+.gallery__section--fluid,
+.gallery__section--column {
   flex-direction: column;
 }
 
@@ -163,7 +158,7 @@ div {
   }
 
   #container,
-  #third {
+  .gallery__section--fluid {
     width: 94.9vh;
   }
 
@@ -171,7 +166,7 @@ div {
     margin-top: calc(7.9212vh * 1.229);
   }
 
-  #third {
+  .gallery__section--fluid {
     flex-flow: row wrap;
   }
 
@@ -179,7 +174,7 @@ div {
     margin-top: calc(22.04vh * 1.229);
   }
 
-  #third,
+  .gallery__section--fluid,
   .higher {
     margin-top: calc(22.04vh * -1.229);
   }
