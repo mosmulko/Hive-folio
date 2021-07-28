@@ -139,51 +139,25 @@
 }
 
 .card__info {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: absolute;
-  top: 30.2%;
-  bottom: 30.2%;
+  top: 0;
   left: 0;
-  right: 0;
-  text-align: center;
-  background-color: transparent;
-  color: transparent;
-  cursor: pointer;
+  fill: transparent;
 }
 
 .card__info:hover {
-  background-color: rgba(6, 70, 252, 0.65);
-  color: white;
-}
-
-.card__info:before,
-.card__info:after {
-  content: "";
   position: absolute;
-  width: 0;
-  border-left: 44.8vw solid transparent;
-  border-right: 44.8vw solid transparent;
+  top: 0;
+  left: 0;
+  fill: white;
 }
 
-.card__info:before {
-  bottom: 100%;
-  border-bottom: 25.9vw solid transparent;
+.card__info--background {
+  fill: transparent;
 }
 
-.card__info:after {
-  top: 100%;
-  width: 0;
-  border-top: 25.9vw solid transparent;
-}
-
-.card__info:hover::before {
-  border-bottom: 25.9vw solid rgba(6, 70, 252, 0.65);
-}
-
-.card__info:hover::after {
-  border-top: 25.9vw solid rgba(6, 70, 252, 0.65);
+.card__info--background:hover {
+  fill: rgba(6, 70, 252, 0.65);
 }
 
 /*------------------------------------*\
@@ -309,33 +283,5 @@
   .gallery {
     width: 141.5vh;
     margin: 0 auto;
-  }
-
-  .card__info:before,
-  .card__info:after {
-    content: "";
-    position: absolute;
-    width: 0;
-    border-left: 23.7vh solid transparent;
-    border-right: 23.7vh solid transparent;
-  }
-
-  .card__info:before {
-    bottom: 100%;
-    border-bottom: 13.5727vh solid transparent;
-  }
-
-  .card__info:after {
-    top: 100%;
-    width: 0;
-    border-top: 13.5727vh solid transparent;
-  }
-
-  .card__info:hover::before {
-    border-bottom: 13.5727vh solid rgba(6, 70, 252, 0.65);
-  }
-
-  .card__info:hover::after {
-    border-top: 13.5727vh solid rgba(6, 70, 252, 0.65);
   }
 }
