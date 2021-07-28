@@ -201,8 +201,14 @@
     margin-top: calc(20.528% / 2);
   }
 
+  /**
+ * Height: 100% important! Otherwise this card wil grow almost twice higher
+ * and card__info won't be lined up with the image
+ */
+
   .section-fluid__item--higher {
-    margin-top: calc(calc(20.528% + 36.815%) * -1);
+    height: 100%;
+    margin-top: calc(calc(calc(36.816% / 2) + calc(20.528% / 2)) * -1);
   }
 
   /**
