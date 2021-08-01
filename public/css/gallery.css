@@ -91,11 +91,7 @@
   opacity: 0.94;
 }
 
-.gallery__filler {
-  display: none;
-}
-
-.gallery__filler--visible-on-desktop {
+.gallery__filler--bottom-1st {
   display: none;
 }
 
@@ -251,10 +247,6 @@
  * right if there's an equal num of cards
  */
 
-  .gallery__filler--edges {
-    display: block;
-  }
-
   /**
  * The margin value comes from dividing filler's height by 2 and adding 20.528
  * of it's width.
@@ -296,7 +288,7 @@
  * displayed, which will be manipulated by JS.
  */
 
-  .gallery__filler--visible-on-desktop {
+  .gallery__filler--bottom-1st {
     display: block;
   }
 }
