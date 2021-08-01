@@ -57,6 +57,10 @@
  *** with first cards of side columns being fully visible in the viewport.
  *
  * Note: each card's width == 81.362% * height && height == 122.9% * width
+ *
+ * Note-2: The default css layout is for when all 3 sections
+ * have an even number of projects. Other scenarios are controlled by JS in
+ * gallery.js file, but styles for these scenarios are in this CSS file.
  */
 
 .gallery {
@@ -198,7 +202,7 @@
  * width.
  */
 
-  .gallery__section--first {
+  .gallery__section--second {
     margin-top: calc(20.528% / 2);
   }
 
@@ -225,9 +229,8 @@
  * The margin value comes from dividing filler's height by 2 and adding 20.528
  * of it's width.
  */
-  .gallery__filler--right {
+  .gallery__filler--higher {
     margin-top: calc(calc(calc(36.816% / 2) + 20.528%) * -1);
-    margin-left: auto;
   }
 }
 
@@ -249,9 +252,7 @@
 
 @media only screen and (min-width: 1101px) {
   /**
- * 3 column layout- due to third section being filled last it
- * needs to be displayed in the middle for visual effect. It can
- * be accomplished by swapping the flex order.
+ * 3 column layout
  */
 
   .gallery__section {
@@ -259,11 +260,6 @@
   }
 
   .gallery__section--second {
-    order: 3;
-  }
-
-  .gallery__section--third {
-    order: 2;
     margin-top: calc(20.528% / 3);
   }
 
