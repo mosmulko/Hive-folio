@@ -91,7 +91,7 @@
   opacity: 0.94;
 }
 
-.gallery__filler--bottom-1st {
+.gallery__filler--bottom-left {
   display: none;
 }
 
@@ -282,13 +282,10 @@
   }
 
   /**
- * 3 fillers are visible 1st of the 3rd section, that is now in
- * the middle and last ones of other sections, that are now on the 
- * side. If 1st column has 1 more project than the filler is not
- * displayed, which will be manipulated by JS.
+ * 
  */
 
-  .gallery__filler--bottom-1st {
+  .gallery__filler--bottom-left {
     display: block;
   }
 }
