@@ -237,21 +237,16 @@
  * and card__info won't be lined up with the image
  */
 
-  .section-fluid__item--higher {
+  .section-fluid__item--higher-while-even {
     height: 100%;
     margin-top: calc(calc(calc(36.816% / 2) + calc(20.528% / 2)) * -1);
   }
 
   /**
- * First and last fillers are now visible while last filler needs to be on
- * right if there's an equal num of cards
- */
-
-  /**
  * The margin value comes from dividing filler's height by 2 and adding 20.528
  * of it's width.
  */
-  .gallery__filler--higher {
+  .section-fluid__filler--higher-while-even {
     margin-top: calc(calc(calc(36.816% / 2) + 20.528%) * -1);
   }
 }
