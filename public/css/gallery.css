@@ -75,6 +75,12 @@
   width: 100%;
 }
 
+.gallery__title {
+  font-size: 1.5rem;
+  fill: white;
+  opacity: 0.94;
+}
+
 .gallery__filler {
   display: none;
 }
@@ -206,10 +212,6 @@
  * width.
  */
 
-  .gallery__section--second {
-    margin-top: calc(20.528% / 2);
-  }
-
   /**
  * Height: 100% important! Otherwise this card wil grow almost twice higher
  * and card__info won't be lined up with the image
@@ -261,10 +263,6 @@
 
   .gallery__section {
     width: calc(100% / 3);
-  }
-
-  .gallery__section--second {
-    margin-top: calc(20.528% / 3);
   }
 
   /**
