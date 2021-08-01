@@ -75,6 +75,16 @@
   width: 100%;
 }
 
+.gallery__section--first {
+  order: 2;
+}
+.gallery__section--second {
+  order: 1;
+}
+.gallery__section--third {
+  order: 3;
+}
+
 .gallery__title {
   font-size: 1.5rem;
   fill: white;
@@ -175,6 +185,15 @@
 /*------------------------------------*\
   #MEDIA-QUERIES
 \*------------------------------------*/
+
+@media only screen and (min-width: 600px), (orientation: landscape) {
+  .gallery__section--first {
+    order: 1;
+  }
+  .gallery__section--second {
+    order: 2;
+  }
+}
 
 @media only screen and (min-width: 600px) and (max-width: 1100px),
   (orientation: landscape) and (max-width: 1100px) {
