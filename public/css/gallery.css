@@ -79,6 +79,10 @@
   display: none;
 }
 
+.gallery__filler--visible-on-desktop {
+  display: none;
+}
+
 /*------------------------------------*\
   #CARD
 \*------------------------------------*/
@@ -270,7 +274,7 @@
  * displayed, which will be manipulated by JS.
  */
 
-  .gallery__filler--desktop {
+  .gallery__filler--visible-on-desktop {
     display: block;
   }
 }
