@@ -303,6 +303,10 @@
   .gallery__filler--bottom-left {
     display: block;
   }
+
+  .gallery__filler--bottom-right {
+    display: none;
+  }
 }
 
 /*------------------------------------*\
