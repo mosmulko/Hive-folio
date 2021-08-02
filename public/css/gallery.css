@@ -250,7 +250,8 @@
 
   .section-fluid__item--higher-while-odd {
     height: 100%;
-    margin-top: calc(calc(61.45% - 18.41% - 10.13%) * -1);
+    /* margin-top: calc(calc(61.45% - 18.41% - 10.13%) * -1); */
+    margin-top: calc(calc(65.638% / 2) * -1);
   }
 
   /**
@@ -268,7 +269,8 @@
 
   .section-fluid__filler--higher-while-odd {
     height: 30.1%;
-    margin-top: calc(calc(61.45% - 37% + 10.13%) * -1);
+    /* margin-top: calc(calc(61.45% - 37% + 10.13%) * -1); */
+    margin-top: calc(calc(65.638% / 2) * -1);
     margin-left: auto;
   }
 }
