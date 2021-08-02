@@ -226,16 +226,21 @@
   }
 
   /**
- * For visual composition first section needs to be lowered by 20.26% of it's
- * own width (which is 50% of it's parent).
- * Every item on the right in the last section needs to be moved higher by 
- * that 20.26% + a height of the filler which is equal to 36.815% of the section
- * width.
+ * In 2 column view the last section is displayed as a row and evenly
+ * redistributed between the first 2 columns. Due to gallery__title's
+ * height, every second item of 3rs section needs to be placed higher
+ * using margin-top, which differs depending on number of projects
+ * being and odd or even number.
+ *
+ * If odd - margin-top == card__title height to width percentage (65.638%)
+ * divided by 2 columns
  */
 
   /**
- * Height: 100% important! Otherwise this card wil grow almost twice higher
- * and card__info won't be lined up with the image
+ * Height of each element needs to be set otherwise nothing gets lined up
+ *
+ * Card - 100% divided by num of rows
+ * Filler - 30.10% divided by num of rows
  */
 
   .section-fluid__item--higher-while-even {
@@ -243,33 +248,17 @@
     margin-top: calc(calc(calc(37% / 2) + calc(20.26% / 2)) * -1);
   }
 
-  /**
- * Margin-top calculations: height of card (122.9% of 50% width) - calculation
- * from the even scenario
- */
-
-  .section-fluid__item--higher-while-odd {
-    height: 100%;
-    /* margin-top: calc(calc(61.45% - 18.41% - 10.13%) * -1); */
-    margin-top: calc(calc(65.638% / 2) * -1);
-  }
-
-  /**
- * The margin value comes from dividing filler's height by 2 and adding 20.26
- * of it's width.
- */
   .section-fluid__filler--higher-while-even {
     margin-top: calc(calc(calc(37% / 2) + 20.26%) * -1);
   }
 
-  /**
- * Margin-top = card height - filler height + half of the title
- * height = 30.10% of card's height
- */
+  .section-fluid__item--higher-while-odd {
+    height: 100%;
+    margin-top: calc(calc(65.638% / 2) * -1);
+  }
 
   .section-fluid__filler--higher-while-odd {
     height: 30.1%;
-    /* margin-top: calc(calc(61.45% - 37% + 10.13%) * -1); */
     margin-top: calc(calc(65.638% / 2) * -1);
     margin-left: auto;
   }
