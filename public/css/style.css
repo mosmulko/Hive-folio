@@ -165,7 +165,6 @@ body {
 .primary-nav {
   width: 92%;
   padding: 1% 4%;
-  /* margin: 0 4%; */
   position: fixed;
   top: 0;
   left: 0;
@@ -312,8 +311,8 @@ body {
   }
 
   .primary-nav {
-    width: 90vw;
-    margin: 0 5vw;
+    width: 90%;
+    padding: 1% 5%;
   }
 
   /**
