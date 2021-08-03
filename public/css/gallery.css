@@ -212,7 +212,7 @@
 
   .gallery__section--fluid {
     flex-flow: row wrap;
-    height: auto;
+    align-items: flex-start;
   }
 
   /**
@@ -239,38 +239,18 @@
  * divided by 2 columns
  */
 
-  /**
- * Height of each element needs to be set otherwise nothing gets lined up
- *
- * Card - 100% divided by num of rows
- * Filler - 30.10% divided by num of rows
- */
-
   .section-fluid__item--higher-while-even {
-    /* height: 100%; */
-    /* height: 50%; */
     margin-top: calc(calc(57.268% / 2) * -1);
-    padding-bottom: calc(57.268% / 2);
-  }
-
-  .section-fluid__filler--higher-while-even {
-    /* height: 30.1%; */
-    /* height: 15.05%; */
-    /* margin-top: calc(calc(57.268% / 2) * -1); */
-  }
-
-  .section-fluid__item--filler {
-    height: 15.05%;
   }
 
   .section-fluid__item--higher-while-odd {
-    height: 100%;
+    /* height: 100%; */
     margin-top: calc(calc(65.638% / 2) * -1);
   }
 
-  .section-fluid__filler--higher-while-odd {
-    height: 30.1%;
-    margin-top: calc(calc(65.638% / 2) * -1);
+  .section-fluid__filler--right {
+    /* height: 30.1%;
+    margin-top: calc(calc(65.638% / 2) * -1); */
     margin-left: auto;
   }
 }
