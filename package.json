@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint --fix --ext .js .",
-    "start": "set DEBUG=app,app:* & nodemon app.js",
+    "start": "set DEBUG=server,server:* & nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
