@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "build:server": "webpack --config webpack.config.server.js",
-    "start": "set DEBUG=server,server:* & nodemon server.js",
+    "build:client": "webpack --config webpack.config.client.js",
+    "start:old": "set DEBUG=server,server:* & nodemon server.js",
+    "start": "node ./dist/server.js",
     "lint": "eslint .",
     "lint:fix": "eslint --fix --ext .js .",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -39,12 +41,15 @@
     "@babel/preset-react": "^7.14.5",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "copy-webpack-plugin": "^9.0.1",
     "eslint": "^7.14.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-html": "^6.1.1",
     "eslint-plugin-import": "^2.22.1",
     "webpack": "^5.48.0",
     "webpack-cli": "^4.7.2",
+    "webpack-manifest-plugin": "^4.0.2",
     "webpack-node-externals": "^3.0.0"
   },
   "nodemonConfig": {

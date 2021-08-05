@@ -1,8 +1,10 @@
-const express = require("express");
-const chalk = require("chalk");
 const morgan = require("morgan");
-const debug = require("debug")("app");
+const debug = require("debug")("server");
+const express = require("express");
 const path = require("path");
+const React = require("react");
+import { renderToString } from "react-dom/server";
+import Gallery from "./src/client/Components/Gallery";
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -11,12 +13,13 @@ app.use(morgan("tiny"));
 
 app.use(express.static(path.join(__dirname, "public")));
 
-app.set("views", "./src/views");
+app.set("views", "./views");
 app.set("view engine", "ejs");
 
-// const projectRouter = require("./src/routes/projectRoutes")();
-
-// app.use("/projects", projectRouter);
+app.get("/gallery", (req, res) => {
+  const component = renderToString(<Gallery />);
+  res.render("gallery", { component });
+});
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "index.html"));
@@ -32,5 +35,5 @@ app.get("/projects", (req, res) => {
 });
 
 app.listen(port, () => {
-  debug(`listening on the port ${chalk.green(port)}`);
+  debug(`listening on the port ${port}`);
 });

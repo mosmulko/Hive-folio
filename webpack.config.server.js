@@ -1,4 +1,5 @@
 const nodeExternals = require("webpack-node-externals");
+const CopyPlugin = require("copy-webpack-plugin");
 const path = require("path");
 
 module.exports = {
@@ -24,10 +25,15 @@ module.exports = {
       {
         test: /\.jsx?$/,
         loader: "babel-loader",
-        options: {
-          configFile: "config.server.json",
-        },
       },
     ],
   },
+  plugins: [
+    new CopyPlugin({
+      patterns: [
+        { from: "./views", to: "views" },
+        { from: "./public", to: "public" },
+      ],
+    }),
+  ],
 };
