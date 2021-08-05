@@ -1,5 +1,5 @@
 const debug = require("debug")("app:projectController");
-const projects = require("../../projectsAPI");
+const projects = require("../../../projectsAPI");
 
 function projectController() {
   function getIndex(req, res) {
