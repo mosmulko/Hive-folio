@@ -1,0 +1,329 @@
+/**
+ * This css file should be loaded as a first css resource in every html file
+ * of this website, as it includes overall rules shared between all subpages.
+ * 
+ * Style is organised with a mobile-first approach in mind, starting with the
+ * portrait orientation. All media queries account for gradually bigger
+ * screens.
+ *
+ */
+
+/**
+ * All css rules that reset different styles among various browsers is in the
+ * normalize.css file. Please check as it has added few custom rules like set
+ * overflow-x to hidden.
+ */
+
+@import "normalize.css";
+
+/*------------------------------------*\
+  #CUSTOM-FONTS
+\*------------------------------------*/
+
+/**
+ * The website uses two downloaded font styles- Roboto for links and buttons
+ * and Poppins for the text in regular weight.
+ * 
+ */
+
+/* roboto-regular - latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Roboto/roboto-v27-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/Roboto/roboto-v27-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/Roboto/roboto-v27-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../fonts/Roboto/roboto-v27-latin-regular.woff") format("woff"),
+    /* Modern Browsers */ url("../fonts/Roboto/roboto-v27-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../fonts/Roboto/roboto-v27-latin-regular.svg#Roboto") format("svg"); /* Legacy iOS */
+}
+
+/* poppins-regular - latin */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Poppins/poppins-v15-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/Poppins/poppins-v15-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/Poppins/poppins-v15-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../fonts/Poppins/poppins-v15-latin-regular.woff") format("woff"),
+    /* Modern Browsers */ url("../fonts/Poppins/poppins-v15-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../fonts/Poppins/poppins-v15-latin-regular.svg#Poppins")
+      format("svg"); /* Legacy iOS */
+}
+
+/*------------------------------------*\
+  #PAGE-STYLES
+\*------------------------------------*/
+
+/**
+ * Font size is responsive and depends on how big is screen's width or height,
+ * whichever is shortest. That's why it is set to vmin units and all text
+ * elements have their size set in em.
+ * This way text is always in the pleasent proportion to the screen size,
+ * no matter the resolution or screen orientation. At the bottom of this file
+ * are media queries that gradually decrease the vmin units as the vmin
+ * equivalent in px grows.
+ */
+body {
+  font-size: 1.7vmin;
+}
+
+/*------------------------------------*\
+  #COLORS
+\*------------------------------------*/
+
+.color__dark-theme {
+  color: rgba(255, 255, 255, 0.94);
+  background-color: #222;
+}
+
+.color__dark-theme--background-fixed {
+  background-color: rgba(35, 34, 34, 0.7);
+}
+
+.color--highlight {
+  background-color: #ff9d00;
+  fill: #ff9d00;
+}
+
+.color--action {
+  background-color: #4859ff;
+}
+
+/**
+ * Although each layout is depandable of the html markup, all layout items
+ * should have consistent margins. If you change them please also change the
+ * following css:
+ ** primary-nav horizontal padding and width below - padding vw is same as 
+ *  this margin %.
+ ** primary-nav-item - horizontal padding should be half of the nav padding.
+ * 
+ * check margin media queries at the bottom of the page and it's depandables
+ */
+
+.layout__item {
+  margin: 0 4%;
+}
+
+/*------------------------------------*\
+  #REUSABLE-ELEMENTS
+\*------------------------------------*/
+
+.link {
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, Tahoma, sans‑serif;
+  font-weight: 400;
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.subheader {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 2.6em;
+  letter-spacing: 0.1em;
+  line-height: 150%;
+}
+
+/**
+ * Same font size and letter-spacing as .primary-nav__item--text
+ * change both for consistency or move this style to .link
+ */
+
+.btn {
+  padding: 0.9em;
+  font-size: 2.2em;
+  letter-spacing: 0.08em;
+}
+
+.btn:hover {
+  filter: contrast(150%);
+}
+
+/*------------------------------------*\
+  #TOP-NAVIGATION
+\*------------------------------------*/
+
+/* ::-webkit-scrollbar {
+  width: 40px;
+} */
+
+.primary-nav {
+  width: 92%;
+  padding: 1% 4%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+.primary-nav__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+
+@media only screen and (orientation: landscape) {
+  .primary-nav__list {
+    justify-content: start;
+  }
+}
+
+.primary-nav__item {
+  padding: 0.4em 2%;
+}
+
+/**
+ * Increased specifity below as the .primary-nav__item padding changes
+ * in media queries later and would override this padding-left property.
+ */
+
+.primary-nav__item.primary-nav__item--first {
+  padding-left: 0;
+}
+
+.primary-nav__item--last {
+  padding-right: 0;
+}
+
+/**
+ * Nav logo is set as an img tag in html and it's size decreases as the 
+ * resolution increases- check media queries below.
+ * 
+ * Note- try changing it to svg tag so you can manipulate it's fill color
+ * on hover!
+ */
+
+.primary-nav__item--logo {
+  display: block;
+  text-indent: -9999px;
+  width: 7.8vmin;
+  height: 8.9vmin;
+  background: url(/images/logo-h.svg);
+  background-size: 7.8vmin 8.9vmin;
+}
+
+.primary-nav__item--text {
+  display: inline-block;
+  padding-top: 0.4em;
+  font-size: 2.2em;
+  letter-spacing: 0.08em;
+  overflow: hidden;
+}
+
+/**
+ * Underline animation on hover for navigation text a tags
+ */
+
+.primary-nav__item--text::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.15em;
+  margin-top: 0.1em;
+  background-color: #4859ff;
+  transform: scaleX(0);
+  transform-origin: top left;
+  transition: transform 0.3s ease;
+}
+
+.primary-nav__item--text:hover::after,
+.primary-nav__item--text:focus::after {
+  transform: scaleX(1);
+}
+
+/*------------------------------------*\
+  #FOOTER
+\*------------------------------------*/
+
+/**
+ * Add flex property if body's display is flex
+ */
+
+.bottom-info {
+  height: 5vh;
+  flex: 0 0 5vh;
+}
+
+/*------------------------------------*\
+  #MEDIA-QUERIES
+\*------------------------------------*/
+
+/*------------------------------------*\
+  #FONT-MEDIA-QUERIES
+\*------------------------------------*/
+
+/**
+ * As font size is set as vmin, media queries need to be set seperate for both
+ * width in portrait and height in landscape mode.
+ */
+
+@media (min-width: 550px) and (orientation: portrait),
+  (min-height: 550px) and (orientation: landscape) {
+  body {
+    font-size: 1.35vmin;
+  }
+
+  .primary-nav__item--logo {
+    width: 5vmin;
+    height: 5.705vmin;
+    background-size: 5vmin 5.705vmin;
+  }
+}
+
+@media (min-width: 750px) and (orientation: portrait),
+  (min-height: 750px) and (orientation: landscape) {
+  body {
+    font-size: 1vmin;
+  }
+}
+
+/*------------------------------------*\
+  #VERY-WIDE-SCREENS
+\*------------------------------------*/
+
+/**
+ * When website is in the landscape orientation (not on tablet though) 
+ * the margins and padding needs to slightly increase for better composition. 
+ * If you change these properties please also change the following css:
+ ** .background-image right property in index.css for min-aspect-ratio 8/5
+ ** .layout__content margin in index.css for min-aspect-ratio 8/5
+ */
+
+@media only screen and (min-aspect-ratio: 8/5) {
+  .layout__item {
+    margin: 0 5%;
+  }
+
+  .primary-nav {
+    width: 90%;
+    padding: 1% 5%;
+  }
+
+  /**
+  * nav item padding bigger by 0.3% than margin to fill up
+  * more space. Aesthetic reasons.
+  */
+  .primary-nav__item {
+    padding: 0.4em 3%;
+  }
+
+  .subheader {
+    font-size: 3em;
+  }
+}
