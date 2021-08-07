@@ -20,7 +20,7 @@ app.use(webpackHotMiddleware(compiler));
 
 // app.use(express.static(path.join(__dirname, "public")));
 
-app.set("views", "./src/views");
+// app.set("views", "./src/views");
 // app.set("view engine", "ejs");
 
 // app.get("/gallery", (req, res) => {

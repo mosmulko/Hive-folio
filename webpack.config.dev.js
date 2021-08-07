@@ -13,6 +13,10 @@ module.exports = {
       "webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000",
       "./src/client/style.js",
     ],
+    gallery: [
+      "webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000",
+      "./src/client/gallery.js",
+    ],
   },
   output: {
     path: path.join(__dirname, "dist"),
@@ -66,8 +70,13 @@ module.exports = {
   plugins: [
     new HtmlWebPackPlugin({
       template: "./src/views/index.html",
-      filename: "./index.html",
-      excludeChunks: ["server"],
+      filename: "./views/index.html",
+      excludeChunks: ["server", "gallery"],
+    }),
+    new HtmlWebPackPlugin({
+      template: "./src/views/gallery.html",
+      filename: "./views/gallery.html",
+      excludeChunks: ["server", "index"],
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
