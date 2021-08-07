@@ -3,17 +3,28 @@ const debug = require("debug")("server");
 const express = require("express");
 const path = require("path");
 const React = require("react");
+const webpack = require("webpack");
+const webpackDevMiddleware = require("webpack-dev-middleware");
 import { renderToString } from "react-dom/server";
 import Gallery from "./src/client/Components/Gallery";
 
 const app = express();
 const port = process.env.PORT || 3000;
 
+const config = require("./webpack.config.dev.js");
+const compiler = webpack(config);
+
 app.use(morgan("tiny"));
 
 app.use(express.static(path.join(__dirname, "public")));
 
-app.set("views", "./views");
+app.use(
+  webpackDevMiddleware(compiler, {
+    publicPath: config.output.publicPath,
+  })
+);
+
+app.set("views", "./src/views");
 app.set("view engine", "ejs");
 
 app.get("/gallery", (req, res) => {
@@ -23,12 +34,6 @@ app.get("/gallery", (req, res) => {
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "index.html"));
-});
-app.get("/contact", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "contactForm.html"));
-});
-app.get("/about", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "about.html"));
 });
 app.get("/projects", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "gallery.html"));
