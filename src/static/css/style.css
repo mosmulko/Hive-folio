@@ -214,7 +214,7 @@ body {
   text-indent: -9999px;
   width: 7.8vmin;
   height: 8.9vmin;
-  background: url(/images/logo-h.svg);
+  background: url("../images/logo-h.svg");
   background-size: 7.8vmin 8.9vmin;
 }
 
