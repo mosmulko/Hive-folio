@@ -3,11 +3,10 @@ const CopyPlugin = require("copy-webpack-plugin");
 const path = require("path");
 
 module.exports = {
-  name: "server",
+  mode: "development",
   entry: {
-    server: path.resolve(__dirname, "./src/server/server.js"),
+    server: "./src/server/server-dev.js",
   },
-  mode: "production",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].js",
