@@ -16,24 +16,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.21.1",
-    "body-parser": "^1.19.0",
-    "chalk": "^4.1.0",
-    "cookie-parser": "^1.4.5",
     "debug": "^4.3.1",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
-    "express-session": "^1.17.1",
     "mongodb": "^3.6.3",
     "morgan": "^1.10.0",
-    "mssql": "^6.2.3",
-    "nodemon": "^2.0.6",
-    "passport": "^0.4.1",
-    "passport-local": "^1.0.0",
-    "popper": "^1.0.1",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "xml2js": "^0.4.23"
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
@@ -51,18 +40,6 @@
     "webpack": "^5.48.0",
     "webpack-cli": "^4.7.2",
     "webpack-dev-middleware": "^5.0.0",
-    "webpack-manifest-plugin": "^4.0.2",
     "webpack-node-externals": "^3.0.0"
-  },
-  "nodemonConfig": {
-    "restartable": "rs",
-    "ignore": [
-      "node_modules/**/node_modules"
-    ],
-    "delay": "2500",
-    "env": {
-      "NODE_ENV": "development",
-      "PORT": 4000
-    }
   }
 }

@@ -1,6 +1,5 @@
 const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const { WebpackManifestPlugin } = require("webpack-manifest-plugin");
 
 module.exports = {
   name: "client",
@@ -24,5 +23,5 @@ module.exports = {
       },
     ],
   },
-  plugins: [new CleanWebpackPlugin(), new WebpackManifestPlugin()],
+  plugins: [new CleanWebpackPlugin()],
 };
