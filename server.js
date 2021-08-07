@@ -6,7 +6,7 @@ const React = require("react");
 const webpack = require("webpack");
 const webpackDevMiddleware = require("webpack-dev-middleware");
 import { renderToString } from "react-dom/server";
-import Gallery from "./src/client/Components/Gallery";
+import Gallery from "./src/components/Gallery";
 
 const app = express();
 const port = process.env.PORT || 3000;
