@@ -6,12 +6,12 @@ const React = require("react");
 const webpack = require("webpack");
 const webpackDevMiddleware = require("webpack-dev-middleware");
 import { renderToString } from "react-dom/server";
-import Gallery from "./src/components/Gallery";
+import Gallery from "../components/Gallery";
 
 const app = express();
 const port = process.env.PORT || 3000;
 
-const config = require("./webpack.config.dev.js");
+const config = require("../../webpack.config.dev.js");
 const compiler = webpack(config);
 
 app.use(morgan("tiny"));

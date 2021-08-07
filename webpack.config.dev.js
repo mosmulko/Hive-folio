@@ -3,23 +3,24 @@ const CopyPlugin = require("copy-webpack-plugin");
 const path = require("path");
 
 module.exports = {
-  name: "server",
+  mode: "development",
   entry: {
-    server: path.resolve(__dirname, "./src/server/server.js"),
+    client: "./src/client/client.js",
   },
-  mode: "production",
+  devtool: "inline-source-map",
+  devServer: {
+    contentBase: "./dist",
+  },
   output: {
+    filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist"),
-    filename: "[name].js",
+    clean: true,
+    publicPath: "/",
   },
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: [".jsx", ".js"],
   },
   externals: [nodeExternals()],
-  target: "node",
-  node: {
-    __dirname: false,
-  },
   module: {
     rules: [
       {
