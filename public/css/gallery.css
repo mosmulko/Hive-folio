@@ -243,12 +243,11 @@
     margin-top: calc(calc(57.268% / 2) * -1);
   }
 
-  .section-fluid__item--higher-while-odd {
-    /* height: 100%; */
+  /* .section-fluid__item--higher-while-odd {
     margin-top: calc(calc(65.638% / 2) * -1);
-  }
+  } */
 
-  .section-fluid__filler--right {
+  .section-fluid__item--right {
     /* height: 30.1%;
     margin-top: calc(calc(65.638% / 2) * -1); */
     margin-left: auto;
