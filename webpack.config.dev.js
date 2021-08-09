@@ -1,6 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   mode: "development",
@@ -51,12 +52,21 @@ module.exports = {
         ],
       },
       {
-        test: /\.(ejs)$/,
-        loader: "ejs-compiled-loader",
+        test: /\.ejs$/,
+        use: {
+          loader: "ejs-compiled-loader",
+          options: {
+            htmlmin: true,
+            htmlminOptions: {
+              removeComments: true,
+            },
+          },
+        },
       },
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
+        // use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
@@ -76,13 +86,29 @@ module.exports = {
       template: "./src/views/index.html",
       filename: "./views/index.html",
       excludeChunks: ["server", "gallery"],
+      inject: "body",
     }),
     new HtmlWebPackPlugin({
       template: "./src/views/gallery.html",
       filename: "./views/gallery.html",
-      excludeChunks: ["server", "index"],
+      excludeChunks: ["server", "main"],
+      inject: "body",
+    }),
+    new HtmlWebPackPlugin({
+      template: "!!ejs-compiled-loader!./src/views/gallery.ejs",
+      filename: "./views/gallery.ejs",
+      excludeChunks: ["server", "main"],
+      inject: "body",
+      templateParameters: {
+        component: "<%- component %>",
+      },
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
   ],
 };
+
+// new MiniCssExtractPlugin({
+//   filename: "[name].css",
+//   chunkFilename: "[id].css",
+// }),
