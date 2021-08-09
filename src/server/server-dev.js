@@ -18,12 +18,13 @@ app.use(
 );
 app.use(webpackHotMiddleware(compiler));
 
+app.use(express.static(__dirname));
+
 app.set("views", "./dist/views");
 app.set("view engine", "ejs");
 
 app.get("/gallery", (req, res) => {
   const component = renderToString(<Gallery />);
-  // const component = "<h1>Working!</h1>";
   res.render("gallery", { component });
 });
 

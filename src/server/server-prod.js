@@ -6,9 +6,9 @@ import Gallery from "../components/Gallery";
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(__dirname));
 
-app.set("views", "./src/views");
+app.set("views", "./dist/views");
 app.set("view engine", "ejs");
 
 app.get("/gallery", (req, res) => {
@@ -23,7 +23,7 @@ app.get("/projects", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "gallery.html"));
 });
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
   console.log(`listening on the port ${port}`);
