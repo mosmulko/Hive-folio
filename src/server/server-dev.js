@@ -1,8 +1,8 @@
 import express from "express";
 import path from "path";
-// import React from "react";
-// import { renderToString } from "react-dom/server";
-// import Gallery from "../components/Gallery";
+import React from "react";
+import { renderToString } from "react-dom/server";
+import Gallery from "../components/Gallery";
 import webpack from "webpack";
 import webpackDevMiddleware from "webpack-dev-middleware";
 import webpackHotMiddleware from "webpack-hot-middleware";
@@ -22,8 +22,8 @@ app.set("views", "./dist/views");
 app.set("view engine", "ejs");
 
 app.get("/gallery", (req, res) => {
-  // const component = renderToString(<Gallery />);
-  const component = "<h1>Working!</h1>";
+  const component = renderToString(<Gallery />);
+  // const component = "<h1>Working!</h1>";
   res.render("gallery", { component });
 });
 
