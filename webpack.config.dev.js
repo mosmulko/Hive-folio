@@ -33,10 +33,13 @@ module.exports = {
     contentBase: "./dist",
     hot: true,
   },
+  resolve: {
+    extensions: [".jsx", ".js"],
+  },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: "babel-loader",
       },
