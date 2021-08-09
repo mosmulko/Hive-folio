@@ -51,6 +51,10 @@ module.exports = {
         ],
       },
       {
+        test: /\.(ejs)$/,
+        loader: "ejs-compiled-loader",
+      },
+      {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
       },
