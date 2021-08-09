@@ -18,15 +18,14 @@ app.use(
 );
 app.use(webpackHotMiddleware(compiler));
 
-// app.use(express.static(path.join(__dirname, "public")));
+app.set("views", "./dist/views");
+app.set("view engine", "ejs");
 
-// app.set("views", "./src/views");
-// app.set("view engine", "ejs");
-
-// app.get("/gallery", (req, res) => {
-//   const component = renderToString(<Gallery />);
-//   res.render("gallery", { component });
-// });
+app.get("/gallery", (req, res) => {
+  // const component = renderToString(<Gallery />);
+  const component = "<h1>Working!</h1>";
+  res.render("gallery", { component });
+});
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "index.html"));
