@@ -189,7 +189,7 @@
  * padding (minus 0.5% for visual effect).
  */
 
-  .layout__content {
+  .layout__content.layout__content {
     margin: 0 calc(10.5% + 5vmin);
   }
 
