@@ -6,9 +6,9 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 module.exports = {
   mode: "production",
   entry: {
-    main: "./src/index.js",
-    style: "./src/style.js",
-    gallery: "./src/gallery.js",
+    main: "./src/client/index.js",
+    style: "./src/client/style.js",
+    gallery: "./src/client/gallery.js",
   },
   output: {
     path: path.join(__dirname, "dist"),
@@ -17,31 +17,30 @@ module.exports = {
   },
   target: "web",
   devtool: "source-map",
-  // Webpack 4 does not have a CSS minifier, although
-  // Webpack 5 will likely come with one
   optimization: {
     minimizer: [
       new UglifyJsPlugin({
         cache: true,
         parallel: true,
-        sourceMap: true, // set to true if you want JS source maps
+        sourceMap: true,
       }),
       new OptimizeCSSAssetsPlugin({}),
     ],
+    runtimeChunk: "single",
+  },
+  resolve: {
+    extensions: [".jsx", ".js"],
   },
   module: {
     rules: [
       {
-        // Transpiles ES6-8 into ES5
-        test: /\.js$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
         },
       },
       {
-        // Loads the javacript into html template provided.
-        // Entry point is set below in HtmlWebPackPlugin in Plugins
         test: /\.html$/,
         use: [
           {
@@ -51,6 +50,18 @@ module.exports = {
         ],
       },
       {
+        test: /\.ejs$/,
+        use: {
+          loader: "ejs-compiled-loader",
+          options: {
+            htmlmin: true,
+            htmlminOptions: {
+              removeComments: true,
+            },
+          },
+        },
+      },
+      {
         test: /\.(png|jpe?g|gif|svg)$/i,
         type: "asset",
         generator: {
@@ -58,8 +69,6 @@ module.exports = {
         },
       },
       {
-        // Loads CSS into a file when you import it via Javascript
-        // Rules are set in MiniCssExtractPlugin
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
@@ -71,14 +80,25 @@ module.exports = {
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: "./src/html/index.html",
-      filename: "./index.html",
+      template: "./src/views/index.html",
+      filename: "./views/index.html",
+      excludeChunks: ["server", "gallery"],
+      inject: "body",
     }),
     new HtmlWebPackPlugin({
-      template: "./src/html/gallery.html",
-      filename: "./gallery.html",
-      inject: "body",
+      template: "./src/views/gallery.html",
+      filename: "./views/gallery.html",
       excludeChunks: ["server", "main"],
+      inject: "body",
+    }),
+    new HtmlWebPackPlugin({
+      template: "!!ejs-compiled-loader!./src/views/gallery.ejs",
+      filename: "./views/gallery.ejs",
+      excludeChunks: ["server", "main"],
+      inject: "body",
+      templateParameters: {
+        component: "<%- component %>",
+      },
     }),
     new MiniCssExtractPlugin({
       filename: "[name].css",
