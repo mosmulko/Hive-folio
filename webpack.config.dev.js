@@ -1,7 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   mode: "development",
@@ -44,13 +43,10 @@ module.exports = {
         loader: "babel-loader",
       },
       {
-        // Loads the javacript into html template provided.
-        // Entry point is set below in HtmlWebPackPlugin in Plugins
         test: /\.html$/,
         use: [
           {
             loader: "html-loader",
-            //options: { minimize: true }
           },
         ],
       },
@@ -69,7 +65,6 @@ module.exports = {
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
-        // use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
@@ -89,19 +84,16 @@ module.exports = {
       template: "./src/views/index.html",
       filename: "./views/index.html",
       excludeChunks: ["server", "gallery"],
-      inject: "body",
     }),
     new HtmlWebPackPlugin({
       template: "./src/views/gallery.html",
       filename: "./views/gallery.html",
       excludeChunks: ["server", "main"],
-      inject: "body",
     }),
     new HtmlWebPackPlugin({
       template: "!!ejs-compiled-loader!./src/views/gallery.ejs",
       filename: "./views/gallery.ejs",
       excludeChunks: ["server", "main"],
-      inject: "body",
       templateParameters: {
         component: "<%- component %>",
       },
@@ -110,8 +102,3 @@ module.exports = {
     new webpack.NoEmitOnErrorsPlugin(),
   ],
 };
-
-// new MiniCssExtractPlugin({
-//   filename: "[name].css",
-//   chunkFilename: "[id].css",
-// }),
