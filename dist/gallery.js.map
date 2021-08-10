@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://library/./src/client/gallery.js"],"names":["hot","module","accept"],"mappings":"qGAE0B,K,YAARA,KAChBC,EAAOD,IAAIE,W","file":"gallery.js","sourcesContent":["import \"../static/css/gallery.css\";\r\n\r\nif (typeof module.hot !== \"undefined\") {\r\n  module.hot.accept(); // eslint-disable-line no-undef\r\n}\r\n"],"sourceRoot":""}

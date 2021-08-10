@@ -23,7 +23,7 @@ app.get("/projects", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "gallery.html"));
 });
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 
 app.listen(port, () => {
   console.log(`listening on the port ${port}`);
