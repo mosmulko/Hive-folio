@@ -99,6 +99,13 @@
   #CARD
 \*------------------------------------*/
 
+/** 
+ * For the svg to scale properly in all browsers, the svg
+ * needs to be set to position absolute and card to position 
+ * relative. Card needs to have a padding bottom set to 
+ * correct svg aspect ratio.
+*/
+
 .gallery__card {
   display: flex;
   width: 100%;
@@ -131,8 +138,6 @@
 
 .card__img {
   width: 100%;
-  /* position: absolute;
-  left: 0; */
   clip-path: polygon(
     603.23px 223.22px,
     603.23px 518.2px,
@@ -162,16 +167,9 @@
  * describing the image. Hexagon shape is achieved using after 
  * and before. It is transparent on load and gets a background 
  * color and visible text on hover.
- *
- * For the svg with image to fill the whole card space, the info
- * needs to be set to position absolute and card to position 
- * relative.
  */
 
 .card__info {
-  /* position: absolute;
-  top: 0;
-  left: 0; */
   opacity: 0;
 }
 
