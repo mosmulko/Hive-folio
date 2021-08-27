@@ -232,6 +232,9 @@
   .section-fluid__item {
     width: 50%;
   }
+  .section-fluid__item--card {
+    padding-bottom: 61.45%;
+  }
 
   /**
  * In 2 column view the last section is displayed as a row and evenly
